@@ -1,0 +1,9 @@
+.grid{
+    display: grid;
+    max-width: 1200px;
+}
+
+header.grid{
+    grid-template-columns: 1fr 2fr
+    grid-template-rows: 110px;    
+}
