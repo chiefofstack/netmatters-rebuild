@@ -20,17 +20,13 @@
 }
 body {
     font-size: 1rem;
-    line-height: 1.5;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    margin: 0;
 }
 a {
     color: #278da4;
     text-decoration: none;
 }
 h1 {
-    font-family: 'Bree Serif', serif;
+    
 }
 p {
     margin-bottom: 1.25em;
@@ -59,17 +55,13 @@ p {
 .btn:hover {
     background-color: rgba(39, 141, 164, 0.8);  
 }
-.material-icons {
-    color: rgba(39, 141, 164, 0.8); 
-    font-size: 2.1em;
-}
+
 
 .site-logo{
     margin-right: auto;
     width: 374px;
     height: 65px;
-    background:url("../images/logo.png") no-repeat center;
-    background-size: cover;
+    background:url("../images/logo.png") no-repeat center / cover #ff0000;
     text-indent: -999999px;
 }
 
