@@ -25,8 +25,8 @@ body {
 
 .site-logo{
     margin-right: auto;
-    width: 374px;
-    height: 65px;
+    width: 414px;
+    height: 72px;
     background:url("../images/logo.png") no-repeat center / cover;
 }
 
@@ -45,15 +45,15 @@ body {
     display: inline-flex;
     height: 56px;
     padding: 5px 15px;    
-    border-radius: 3px;    
+    border-radius: 3px;
     margin-right:20px;
     color: #fff;
-    font-size: 1.125rem;    
+    font-size: 1.125rem;
     text-transform: uppercase;
     align-items:center;
 }
 .btn:hover {
-    background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
 }
 
 .btn-primary{
