@@ -5,16 +5,23 @@
 .nav{
     padding:0;
     margin:0;
+}
 
+.nav{
+    display: flex;
+    width: 1200px;    
+    justify-content: space-around;
 }
 
 .nav__item{
-    display: inline-flex;
+    flex-grow: 1;
     text-align:center;
+    list-style:none;    
 }
 
 .nav__item a{
-    padding: 20px;
+    display: block;
+    padding: 18px 0;
     text-transform: uppercase;
     color: #fff;
     font-size: 1.25rem;
