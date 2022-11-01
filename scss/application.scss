@@ -14,15 +14,90 @@
 @import 'utilities/index'; 
 
 
-//TEMPORARY PLACEHOLDER STYLES
+//OK - TEMPORARY
 * {
     box-sizing: border-box;
 }
 body {
-    font-size: 1rem;
+    font-family: 'Poppins';
+    font-size: 16px;
 }
+
+.site-logo{
+    margin-right: auto;
+    width: 374px;
+    height: 65px;
+    background:url("../images/logo.png") no-repeat center / cover;
+}
+
+.srt {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);    
+    overflow: hidden;     
+}
+
+.btn {
+    display: inline-flex;
+    height: 56px;
+    padding: 5px 15px;    
+    border-radius: 3px;    
+    margin-right:20px;
+    color: #fff;
+    font-size: 1.125rem;    
+    text-transform: uppercase;
+    align-items:center;
+}
+.btn:hover {
+    background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+}
+
+.btn-primary{
+    background-color: #333645;
+}
+
+.btn-secondary{
+    background-color: #4183d7;
+}
+.btn-default{
+    background-color: #999aa2;
+}
+
+
+.btn i{
+    font-size:1.5rem;
+    margin-right: 13px;
+}
+
+.hamburger {    
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    border-top: solid 3px #fff;
+    border-bottom: solid 3px #fff;
+}
+
+.hamburger:before{
+    display:block;
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    top: 4px;     
+}
+
+
+
+//TEMPORARY PLACEHOLDER STYLES
+
 a {
-    color: #278da4;
+    color: #4183d7;
     text-decoration: none;
 }
 h1 {
@@ -32,35 +107,10 @@ p {
     margin-bottom: 1.25em;
 }
 
-.card {
-    padding: 1.5em 1em;
-    border: 1px solid #e1e1e1;
-    border-radius: 0.25em;
-}
-.card h1 {
-    color: #278da4; 
-    margin: 0.35em 0 0;
-    line-height: 1.25;
-}
-.btn {
-    padding: 5px 15px;
-    background-color: #4183d7;
-    border-radius: 3px;
-    display: inline-block;
-    color: #fff;
-    font-size: 1.125rem;    
-    text-transform: uppercase;    
-}
-.btn:hover {
-    background-image: linear-gradient(rgb(0 0 0/10%) 0 0);
+.btn-search i{
+    margin-right:0;
 }
 
-
-.site-logo{
-    margin-right: auto;
-    width: 374px;
-    height: 65px;
-    background:url("../images/logo.png") no-repeat center / cover #ff0000;
-    text-indent: -999999px;
+.btn-toggle{
+    margin-right:0;
 }
-
