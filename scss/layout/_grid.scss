@@ -1,6 +1,7 @@
 .container{
     display: grid;
     max-width: 1200px;
+    margin: auto;
 }
 
 //Header Grid
@@ -16,4 +17,8 @@ header.container{
     padding: 20px;
 }
 
+.topbar-links{
+    display:flex;
+    align-items: center;
+}
 
