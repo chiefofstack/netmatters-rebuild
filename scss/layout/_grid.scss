@@ -1,20 +1,23 @@
 .container{
     display: grid;
-    max-width: 1200px;
+    width: 100vw;
     margin: auto;
 }
 
 //Header Grid
-header.container{
+.header{
     grid-template-columns: 1fr;
-    grid-template-rows: 110px, 100px;    
+    grid-template-rows: 110px 100px;    
 }
 
-.header{
+.topbar{
     display:flex;
     flex-direction: row;
     justify-content: center;
     padding: 20px;
+    width: 100vw;
+    max-width:1200px;
+    margin:auto;
 }
 
 .topbar-links{
@@ -22,3 +25,16 @@ header.container{
     align-items: center;
 }
 
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    margin:auto;
+}
+
+.nav{
+    display: flex;
+    width: 1200px;    
+    justify-content: center;
+}
