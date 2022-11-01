@@ -1,13 +1,59 @@
+.navbar{
+    background-color: #333645;
+}
+
 .nav{
+    padding:0;
+    margin:0;
 
 }
 
 .nav__item{
-    display: inline-block;
+    display: inline-flex;
+    text-align:center;
 }
 
 .nav__item a{
     padding: 20px;
     text-transform: uppercase;
-    min-width: 2rem;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1rem;
+}
+
+.nav__item i{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+a.software i{
+    color: #67809f;
+}
+
+a.support i{
+    color: #4183d7;
+}
+
+a.marketing i{
+    color: #2ecc71;
+}
+
+a.services i{
+    color: #d64541;
+}
+
+a.design i{
+    color: #926fb1;
+}
+
+a.security i{
+    color: #f62459
+}
+
+a.course i{
+    color: #ce4125
+}
+
+.nav__item small{
+    font-size: 0.75rem;
 }
