@@ -1,10 +1,10 @@
-.grid{
+.container{
     display: grid;
     max-width: 1200px;
 }
 
 //Header Grid
-header.grid{
+header.container{
     grid-template-columns: 1fr;
     grid-template-rows: 110px, 100px;    
 }
@@ -12,12 +12,8 @@ header.grid{
 .header{
     display:flex;
     flex-direction: row;
-    justify-content: center;    
+    justify-content: center;
+    padding: 20px;
 }
 
-
-
-.header-links{
-    background-color:blue;
-}
 
