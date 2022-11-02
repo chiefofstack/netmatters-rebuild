@@ -4,6 +4,7 @@
     margin: auto;
 }
 
+
 //Header Grid
 .header{
     grid-template-columns: 1fr;
@@ -36,8 +37,8 @@
 
 //Banner Grid
 .banner{
-    display: flex; 
-    
+   grid-template-columns:1fr;
+   grid-template-rows: auto auto;
 }
 
 .slideshow{
@@ -78,5 +79,28 @@
 .slide-text a i{
     font-size: 1.25rem;
     margin: 0 0 0 13px;
+}
+
+.slideshow-buttons{
+    margin-top: -80px;
+}
+
+.dots{
+    display:flex;
+    justify-content:center;
+}
+
+.dot{
+    list-style:none;
+}
+
+.dot span{
+    background-color: hsla(0,0%,100%,.5);
+    width:11px;
+    height:11px;
+    margin: 0 10px;
+    background: #d6d6d6;
+    display:block;
+    border-radius: 30px;
 }
 
