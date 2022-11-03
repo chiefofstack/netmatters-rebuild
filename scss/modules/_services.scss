@@ -1,0 +1,87 @@
+.heading{
+    display: flex;
+    align-items: center;
+    padding-top:40px;
+}
+
+.heading h2{
+    font-size: 2.7rem;
+    margin-right:auto;
+}
+
+.heading h3{
+    font-size: 1.625rem;    
+}
+
+.heading h3 a{
+    color: #333645;
+}
+
+.card{
+    position:relative;
+    top: 0;
+    border:1px solid #ccc;
+    border-radius:15px;
+    cursor: pointer;
+    
+    padding:30px;
+    box-shadow:0 3px 35px rgb(0 0 0 /10%);
+    
+    text-align:center;
+    transition: .5s ease;
+    background-color: #fff;
+
+    margin-top:20px;
+}
+.card:hover{
+    top: -10px;
+}
+.card i{
+    display: flex;
+    width: 65px;
+    height: 65px;
+    margin: auto auto 15px auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #6c757d;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 1.75rem;
+}
+.card h2{
+    font-size: 1.3rem;
+    position: relative;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+    color: #333645;
+}
+
+.card p{
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-weight: 400;
+    color: #333645;
+    
+}
+.btn-services{
+    margin:auto auto 0 auto;    
+}
+
+.carousel{
+    display:flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.partners-strip{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item{
+    margin:0 50px;
+    filter: grayscale(100%);
+}
+
