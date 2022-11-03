@@ -4,6 +4,7 @@
 body {
     font-family: 'Poppins';
     font-size: 16px;
+    color: $body-color;
 }
 
 a {
@@ -14,14 +15,6 @@ a {
 p {
     margin-bottom: 1.25em;
 }
-
-$software-color: #67809f;
-$support-color: #4183d7;
-$marketing-color: #2ecc71;
-$services-color: #d64541;
-$design-color: #926fb1;
-$security-color: #f62459;
-$training-color: #ce4125;
 
 
 //HEADER
@@ -53,7 +46,7 @@ $training-color: #ce4125;
     border:0;
     border-radius: 3px;    
     align-items: center;
-    color: #fff;
+    color: $white;
  
 }
 
@@ -64,46 +57,46 @@ $training-color: #ce4125;
 
 
 .btn-prim{
-    background-color: #333645;
-    color: #fff;    
+    background-color: $primary-color;
+    color: $white;    
     &:hover{
         background-color: #22242e;
-        color: #fff;
+        color: $white;
     }
 }
 
 .btn-sec{
     background-color: #4183d7;
-    color: #fff;
+    color: $white;
     &:hover{
         background-color: #2a6ec6;
-        color: #fff;
+        color: $white;
     }
 }
 .btn-def{
     background-color: #999aa2;
-    color: #fff;
+    color: $white;
     &:hover{
         background-color: #84858f;
-        color: #fff;
+        color: $white;
     }
 }
 
 .btn-tertiary{
     background-color: #67809f;
-    color: #fff;
+    color: $white;
     &:hover{
         background-color: #566c88;
-        color: #fff;
+        color: $white;
     }
 }
 
 .btn-services{
     background-color: #67809f;
-    color: #fff;
+    color: $white;
     &:hover{
         background-color: #566c88;
-        color: #fff;
+        color: $white;
     }
 }
 
@@ -112,8 +105,8 @@ $training-color: #ce4125;
     position: relative;
     width: 30px;
     height: 18px;
-    border-top: solid 3px #fff;
-    border-bottom: solid 3px #fff;
+    border-top: solid 3px $white;
+    border-bottom: solid 3px $white;
 }
 
 .hamburger:before{
@@ -122,7 +115,7 @@ $training-color: #ce4125;
     content: '';
     width: 30px;
     height: 3px;
-    background: #fff;
+    background: $white;
     top: 4px;     
 }
 

@@ -36,8 +36,8 @@ $navColors: (
 }
 
 
-.navibar{
-    background-color: #333645;
+.navibar{ 
+    background-color: $primary-color;
 }
 
 .nav{
@@ -57,7 +57,7 @@ $navColors: (
     display: block;
     padding: 18px 0;
     text-transform: uppercase;
-    color: #fff;
+    color: $white;
     font-size: 1.15rem;
     line-height: 1rem;
 }
