@@ -1,10 +1,37 @@
-.navbar{
+.topbar{
+    padding: 20px 0;
+}
+
+.topbar-links{
+    display:flex;
+    justify-content: flex-end;
+    padding: 7px 0;
+}
+
+.topbar-links a{
+    margin-right: 15px;
+}
+
+.btn{
+    display: inline-flex;
+}
+
+.btn-search i{
+    margin-right:0;
+}
+
+.btn-toggle{
+    padding: 14px 15px;
+    margin-right: 0 !important;
+}
+
+
+.navibar{
     background-color: #333645;
 }
 
 .nav{
     display: flex;
-    width: 1200px;    
     justify-content: space-around;
     padding:0;
     margin:0;
