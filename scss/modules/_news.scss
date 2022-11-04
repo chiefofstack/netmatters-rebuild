@@ -1,0 +1,118 @@
+$cardColors: (
+  ".card-gray": $software-color,
+  ".card-green": $marketing-color,
+);
+
+.news{
+    overflow-x:hidden;
+    .container{
+        margin-bottom: 50px;
+    }
+}
+
+.news-item{
+    padding: 0;
+    border-radius: 0.25rem;
+    text-align:left;
+    &:hover{
+        top: -10px;    
+        & h4, & p{
+            color: $body-color;
+        }
+    }
+}
+
+
+@each $cardName, $color in $cardColors {
+    #{$cardName}, #{$cardName}:hover {  
+        background-color: $white;
+        color: $body-color;
+        & span.btn, span.btn-flag{
+            background-color: #{$color};
+            color: $white;
+        }
+        & h4{
+            color: #{$color};
+        }
+    }
+}
+
+.news-wrap{
+    padding:30px;
+}
+
+.news-item h4{
+    font-size: 1rem;
+    font-weight:bold;
+}
+
+.news-item p{
+    color: $body-color;
+}
+
+
+.btn-flag{    
+    position:relative;
+    z-index: 1;
+    margin-left:auto;
+    top: -170px;
+    margin-top: -24px;
+    color: $white;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    z-index: 1;
+    border-radius: 0;
+    &:hover{
+        color:$white;
+        text-decoration:underline;
+    }
+}
+
+.author{
+    display: table;
+    border-top: 1px solid #ccc;
+    padding-top: 30px;
+    margin-top: 30px;
+    width: 100%;
+    font-size: .875rem;
+}
+
+.avatar, .info{
+    display:table-cell;
+    vertical-align: middle;
+}
+
+.info strong{
+    color: $primary-color;
+}
+
+
+.logo-bar{
+    padding: 50px 0;
+}
+
+
+//CLIENTS
+
+.client-strip{
+    display: flex;
+    justify-content:space-around;
+    padding: 50px 0;
+    margin: 0;
+}
+
+.client{
+    flex-grow: 1;
+    display: inline-flex;
+    justify-content: center;
+    filter: grayscale(100%) opacity(80%);
+    padding: 0px 20px;
+
+    &:hover{
+        filter:none;
+    }
+
+    & img{
+        max-width: 100%;
+    }
+}
