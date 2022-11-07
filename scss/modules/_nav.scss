@@ -8,6 +8,17 @@ $navColors: (
   "a.course": $training-color
 );
 
+$navBgColors: (
+  "a.software": $software-bg-color,
+  "a.support": $support-bg-color,
+  "a.marketing": $marketing-bg-color,
+  "a.services": $services-bg-color,
+  "a.design": $design-bg-color,
+  "a.security": $security-bg-color,
+  "a.course": $course-bg-color
+);
+
+
 .topbar{
     padding: 20px 0;
 }
@@ -54,6 +65,7 @@ $navColors: (
 }
 
 .nav__item a{
+    position:relative;
     display: block;
     padding: 18px 0;
     text-transform: uppercase;
@@ -71,11 +83,48 @@ $navColors: (
     margin-bottom: 10px;
 }
 
-@each $itemName, $color in $navColors {
-
-    #{$itemName} i{    
+@each $className, $color in $navColors {
+    #{$className} i{    
         color: #{$color};       
+    }
+
+    #{$className}:hover{
+        background-color: $color;
+        & i{
+            color: $white;
+        }  
+    }
+    #{$className}:hover:before{
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 35px 70px 0;
+        border-color: $color transparent transparent;
+        transform: translateX(-64.6px);
+        bottom:-35px;
+        z-index: 1;
+    }
+    #{$className}:hover + .mega-menu{
+        display:block;
+    }
+
+}
+
+@each $className, $color in $navBgColors {
+    #{$className} + .mega-menu{
+        position: absolute;
+        // display: none;
+        background-color: $color;
+        width: 100%;
+        left: 0;
+        padding: 50px;
     }
 }
 
+.nav__item .mega-menu{
+    display:block;
+    color: $white;
+}
 
