@@ -61,7 +61,7 @@ $navBgColors: (
 .nav__item{
     flex-grow: 1;
     text-align:center;
-    list-style:none;    
+    list-style:none;
 }
 
 .nav__item a{
@@ -94,18 +94,17 @@ $navBgColors: (
             color: $white;
         }  
     }
-    #{$className}:hover:before{
+
+    
+    //nav triangle
+    #{$className}:hover::before{
+        @include triangle($color, 90px);
         position: absolute;
-        content: '';
-        width:  0;
-        height: 0;
-        border-style: solid;
-        border-width: 35px 70px 0;
-        border-color: $color transparent transparent;
         transform: translateX(-45%);
         bottom:-35px;
-        z-index: 1;
     }
+
+
     #{$className}:hover + .mega-menu{
         display:block;
     }
@@ -134,7 +133,6 @@ $navBgColors: (
         list-style:none;
 
         & li{
-
             & a{
                 text-transform: capitalize;                
                 padding: 0.625rem 0.938rem 0.625rem 0;
@@ -146,12 +144,8 @@ $navBgColors: (
 
             & i{
                 margin-right: 10px;
-            }
-
-          
+            }          
         }
-
-
     }
 }
 
