@@ -8,10 +8,11 @@ $cardColors: (
   ".card-training": $training-color
 );
 
-.services{
+.our-services{
     .container{
         margin-bottom:50px;
     }
+    overflow-x:hidden;
 }
 
 .heading{
