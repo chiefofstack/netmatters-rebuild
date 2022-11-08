@@ -38,12 +38,30 @@ $navBgColors: (
     display: inline-flex;
 }
 
-.btn-search i{
+.btn-search-input .input-field{
+    height:54px;
+    padding: 5px 60px 5px 15px;
+}
+
+.btn-search-input .btn{
+    margin-left: -66px;
+    box-shadow: none;
+    padding: 17px 21px;
+}
+
+.btn-search i, .btn-search-input i, .btn-call i{
     margin-right:0;
 }
 
+.btn-call {
+    margin-right: 0 !important;
+    & i{
+        font-size:1.65rem;
+    }
+}
+
 .btn-toggle{
-    padding: 14px 15px;
+    padding: 18px 15px;
     margin-right: 0 !important;
 }
 
@@ -183,6 +201,9 @@ $navBgColors: (
 }
 
 @media (min-width: map.get($breakpoints, "xs")) {
+    .topbar{
+        padding-bottom:10px;
+    }
     .topbar-links{
         & .btn-support, & .btn-contact, & .btn-search, & .btn-search-input{
             display:none;
@@ -195,12 +216,20 @@ $navBgColors: (
         display:none ;
     }
 
-    .topbar-links .btn-search-input{
-        display:block;
+    .topbar-links {
+        & .btn-search-input{
+            display:block;
+        }
+        & .btn-call{
+            display:none;
+        }
     }
 }
 
 @media (min-width: map.get($breakpoints, "lg")) {
+    .topbar{
+        padding-bottom:20px;
+    }
     .topbar-links{
         & .btn-support, & .btn-contact, & .btn-search{
             display:block;
@@ -221,11 +250,20 @@ $navBgColors: (
     }
 }
 
-
 @media (min-width: map.get($breakpoints, "xl")) {
     $size : ((map.get($navWidths, "xl") / 7) / 2 ) + 0px;
     .nav__item a:hover::before{
         @include triangle(null, $size);
+    }
+
+    .topbar-links {
+        & .btn-search-input{
+            display:block;
+        }
+        
+        & .btn-search{
+            display: none;
+        }
     }
 }
 
