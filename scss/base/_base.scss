@@ -69,6 +69,15 @@ p {
     }
 }
 
+.btn-prim-inv{ //primary inverted
+    background-color: $white;
+    color: $primary-color;    
+    &:hover{
+        background-color:$white;
+        color: $primary-color;
+    }
+}
+
 .btn-sec{ //secondary
     background-color: #4183d7;
     color: $white;
@@ -112,8 +121,6 @@ p {
     }
 }
 
-
-
 .hamburger {    
     display: block;
     position: relative;
@@ -132,7 +139,6 @@ p {
         top: 4px;   
     }
 }
-
 
 .input-field{
     height: 47px;
