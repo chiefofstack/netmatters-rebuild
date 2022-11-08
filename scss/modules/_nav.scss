@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $navColors: (
   "a.software": $software-color,
   "a.support": $support-color,
@@ -17,7 +19,6 @@ $navBgColors: (
   "a.security": $security-bg-color,
   "a.course": $course-bg-color
 );
-
 
 .topbar{
     padding: 20px 0;
@@ -49,6 +50,7 @@ $navBgColors: (
 
 .navibar{ 
     background-color: $primary-color;
+    display:none;
 }
 
 .nav{
@@ -59,7 +61,7 @@ $navBgColors: (
 }
 
 .nav__item{
-    flex-grow: 1;
+    flex: 1 0;
     text-align:center;
     list-style:none;
 }
@@ -95,13 +97,13 @@ $navBgColors: (
         }  
     }
 
-    
+
     //nav triangle
     #{$className}:hover::before{
-        @include triangle($color, 90px);
+        @include triangle($color, 92.57px);
         position: absolute;
-        transform: translateX(-45%);
         bottom:-35px;
+        left:0;
     }
 
 
@@ -146,6 +148,35 @@ $navBgColors: (
                 margin-right: 10px;
             }          
         }
+    }
+}
+
+
+
+@media (min-width: map.get($breakpoints, "md")) {
+    .navibar{
+        display:block !important;
+    }
+    $size : ((map.get($navWidths, "md") / 7) / 2 ) + 0px;
+    .nav__item a:hover::before{
+        @include triangle(null, $size);
+
+    }
+}
+
+
+@media (min-width: map.get($breakpoints, "lg")) {
+    $size : ((map.get($navWidths, "lg") / 7) / 2 ) + 0px;
+    .nav__item a:hover::before{
+        @include triangle(null, $size);
+    }
+}
+
+
+@media (min-width: map.get($breakpoints, "xl")) {
+    $size : ((map.get($navWidths, "xl") / 7) / 2 ) + 0px;
+    .nav__item a:hover::before{
+        @include triangle(null, $size);
     }
 }
 
