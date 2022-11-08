@@ -182,35 +182,56 @@ $navBgColors: (
     margin-right:0;
 }
 
-@media (min-width: map.get($breakpoints, "sm")) {
+@media (min-width: map.get($breakpoints, "xs")) {
+    .topbar-links{
+        & .btn-support, & .btn-contact, & .btn-search, & .btn-search-input{
+            display:none;
+        }
+    }    
+}    
+
+@media (min-width: map.get($breakpoints, "md")) {
     .searchbar{
         display:none ;
     }
+
+    .topbar-links .btn-search-input{
+        display:block;
+    }
 }
 
+@media (min-width: map.get($breakpoints, "lg")) {
+    .topbar-links{
+        & .btn-support, & .btn-contact, & .btn-search{
+            display:block;
+        }
 
-@media (min-width: map.get($breakpoints, "md")) {
+        & .btn-search-input{
+            display:none;
+        }
+    }
+
     .navibar{
         display:block;
     }
-    $size : ((map.get($navWidths, "md") / 7) / 2 ) + 0px;
-    .nav__item a:hover::before{
-        @include triangle(null, $size);
-
-    }
-}
-
-
-@media (min-width: map.get($breakpoints, "lg")) {
     $size : ((map.get($navWidths, "lg") / 7) / 2 ) + 0px;
     .nav__item a:hover::before{
         @include triangle(null, $size);
+
     }
 }
 
 
 @media (min-width: map.get($breakpoints, "xl")) {
     $size : ((map.get($navWidths, "xl") / 7) / 2 ) + 0px;
+    .nav__item a:hover::before{
+        @include triangle(null, $size);
+    }
+}
+
+
+@media (min-width: map.get($breakpoints, "xxl")) {
+    $size : ((map.get($navWidths, "xxl") / 7) / 2 ) + 0px;
     .nav__item a:hover::before{
         @include triangle(null, $size);
     }
