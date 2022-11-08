@@ -29,18 +29,19 @@ $white: #ffffff;
 
 
 $breakpoints:(
-    "xl": 1400px,
-    "lg": 1200px,
-    "md":992px,
-    "sm": 768px,
-    "xs": 576px
+    "xxl": 1400px,
+    "xl": 1200px,
+    "lg":992px,
+    "md": 768px,
+    "sm": 576px,
+    "xs": 0px,
 );
 
 $navWidths:(
-    "xl": 1296,
-    "lg": 1116,
-    "md":936,
-    "sm": 696,
-    "xs": 516
+    "xxl": 1296,
+    "xl": 1116,
+    "lg":936,
+    "md": 696,
+    "sm": 516
 );
 
