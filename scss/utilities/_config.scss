@@ -26,3 +26,21 @@ $instagram-color: #d93175;
 $linkedin-color: #0077b5;
 
 $white: #ffffff;
+
+
+$breakpoints:(
+    "xl": 1400px,
+    "lg": 1200px,
+    "md":992px,
+    "s": 768px,
+    "xs": 576px
+);
+
+$navWidths:(
+    "xl": 1296,
+    "lg": 1116,
+    "md":936,
+    "s": 696,
+    "xs": 516
+);
+
