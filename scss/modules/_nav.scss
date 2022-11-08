@@ -151,11 +151,47 @@ $navBgColors: (
     }
 }
 
+.searchbar{
+    display:block;
+}
+
+.searchbar .keyword{
+    width: 100%;
+    height:47px;
+    padding: 5px 40px 5px 15px;
+    background-color: rgba(0,0,0,.1);
+    outline: 1px solid hsla(0,0%,100%,.2);
+    border: 2px solid rgba(0,0,0,.1);
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    margin-bottom:20px;
+}
+
+.searchbar .btn{
+    float: right;
+    margin-top: -67px;
+    background: none;
+    color: $primary-color;
+    padding: 14px 15px;
+}
+
+.searchbar .btn i{
+    margin-right:0;
+}
+
+@media (min-width: map.get($breakpoints, "sm")) {
+    .searchbar{
+        display:none ;
+    }
+}
 
 
 @media (min-width: map.get($breakpoints, "md")) {
     .navibar{
-        display:block !important;
+        display:block;
     }
     $size : ((map.get($navWidths, "md") / 7) / 2 ) + 0px;
     .nav__item a:hover::before{
