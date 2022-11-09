@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $cardColors: (
   ".card-gray": $software-color,
   ".card-green": $marketing-color,
@@ -20,6 +22,10 @@ $cardColors: (
             color: $body-color;
         }
     }
+}
+
+.news-items>:last-child{
+    display:none;
 }
 
 
@@ -115,4 +121,11 @@ $cardColors: (
     & img{
         max-width: 100%;
     }
+}
+
+@media(min-width:map.get($breakpoints,"xl")){
+    .news-items>:last-child{
+        display:block;
+    }
+    
 }
