@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $cardColors: (
   ".card-software": $software-color,
   ".card-support": $support-color,
@@ -19,13 +21,14 @@ $cardColors: (
     display: flex;
     align-items: center;
     padding-top:40px;
+    color: $primary-color;
 }
 
-.heading h2{
+h2.section-title{
     font-size: 2.7rem;
     margin-right:auto;
     font-weight:bold;
-    color: $primary-color;
+    
 }
 
 .heading h3{
@@ -35,13 +38,16 @@ $cardColors: (
     color: $primary-color;
 }
 
-.heading h4{
+h4.section-link{
     font-size: 1.625rem;
     font-weight:bold;
 }
 
-.heading h4 a{
-    color: #333645;
+h4.section-link a{
+    color: $primary-color;
+    &:hover{
+        text-decoration:underline;
+    }
 }
 
 .card{
@@ -136,5 +142,35 @@ $cardColors: (
 
     &:hover{
         filter:none;
+    }
+}
+
+.footing{
+    display: flex;
+    align-items: center;
+    padding-top:40px;
+    color: $primary-color;
+}
+
+.footing .section-link{
+    width: 100%;
+    text-align:center;
+}
+
+@media(min-width:map.get($breakpoints,"xs")){
+    .footing{
+        display:block;
+    }
+    .heading .section-link{
+        display: none;
+    }
+}
+
+@media(min-width:map.get($breakpoints,"md")){
+    .footing{
+        display:none;
+    }
+    .heading .section-link{
+        display: block;
     }
 }
