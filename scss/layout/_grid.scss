@@ -5,6 +5,12 @@
     padding-right: 15px;
 }
 
+@media (min-width: 576px){
+    .container {
+        max-width: 100%;
+    }
+}
+
 @media (min-width: 768px){
     .container {
         max-width: 750px;
@@ -19,7 +25,7 @@
 
 @media (min-width: 1260px){
     .container {
-        max-width: 1200px;
+        max-width: 1260px;
     }
 }
 
