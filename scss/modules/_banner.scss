@@ -2,9 +2,9 @@
 
 .slideshow{
     display: flex;
-    height: 550px;
+    min-height: 550px;
     background: 
-        linear-gradient(270deg, transparent 25%, #000), 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("../images/home-banner.webp") 
         center/cover no-repeat;
 }
@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content:center;
     color: #fff;
-    height: 550px;    
+    min-height: 550px;    
     max-width: 772px;
     text-align: center;
     margin: auto;
@@ -68,6 +68,37 @@
         cursor:pointer;
     }
     
+}
+
+@media (min-width:map.get($breakpoints,"xs")){
+    .slide-text{
+        padding-bottom:80px;
+    }
+}
+
+@media (min-width:map.get($breakpoints,"sm")){
+    .slide-text{
+        padding-bottom:40px;
+    }
+}
+
+@media (min-width:map.get($breakpoints,"md")){
+    .slide-text{
+        padding-bottom:20px;
+    }
+}
+
+
+@media (min-width:map.get($breakpoints,"lg")){
+    .slide-text{
+        padding-bottom:0;
+    }
+    .slideshow{
+        background: 
+            linear-gradient(270deg, transparent 25%, #000), 
+            url("../images/home-banner.webp") 
+            center/cover no-repeat;
+    }
 }
 
 @media (min-width:map.get($breakpoints,"lg")){
