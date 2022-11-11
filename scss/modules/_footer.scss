@@ -78,6 +78,9 @@ $buttonColors: (
     display:flex;
 }
 
+.copyright span{
+    margin:0 10px;
+}
 .social{
     justify-content: flex-end;
 }
@@ -93,6 +96,10 @@ $buttonColors: (
     .service-list, .office-list{        
         justify-content: space-evenly;
     }
+    .copyright br{
+        display:none;
+    
+    }   
 }
 
 @media(min-width:map.get($breakpoints,"xl")){
