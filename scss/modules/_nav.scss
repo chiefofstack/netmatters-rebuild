@@ -40,6 +40,7 @@ $navBgColors: (
 
 .btn-search-input .input-field{
     height:54px;
+    width:303px;
     padding: 5px 60px 5px 15px;
 }
 
@@ -146,6 +147,10 @@ $navBgColors: (
     color: $white;
     text-align:left;
 
+    &:hover{
+        display:block;
+    }
+
     & .sub-menu{
         margin-top:20px;        
         padding-left: 0;
@@ -159,11 +164,15 @@ $navBgColors: (
 
                 &:hover{
                     text-decoration: underline;
+                    &::before{
+                        display:none;
+                    }
                 }
             }
 
             & i{
                 margin-right: 10px;
+                width: 28px;
             }          
         }
     }
