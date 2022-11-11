@@ -74,6 +74,14 @@ $buttonColors: (
     height: 2rem;
 }
 
+.copyright, .social{
+    display:flex;
+}
+
+.social{
+    justify-content: flex-end;
+}
+
 @each $className, $color in $buttonColors{
     #{$className}:hover{
             background-color: $color;  
