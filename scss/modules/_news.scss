@@ -24,11 +24,6 @@ $cardColors: (
     }
 }
 
-.news-items>:last-child{
-    display:none;
-}
-
-
 @each $cardName, $color in $cardColors {
     #{$cardName}, #{$cardName}:hover {  
         background-color: $white;
@@ -50,6 +45,7 @@ $cardColors: (
 .news-item h4{
     font-size: 1rem;
     font-weight:bold;
+    margin-bottom:30px;
 }
 
 .news-item p{
@@ -66,7 +62,7 @@ $cardColors: (
     color: $white;
     font-size: 0.75rem;
     padding: 3px 10px;
-
+    font-weight: 600;
     border-radius: 0;
     &:hover{
         color:$white;
@@ -99,11 +95,14 @@ $cardColors: (
 
 
 //CLIENTS
+.clients{
+    display:none;
+}
 
 .client-strip{
     display: flex;
     justify-content:space-around;
-    padding: 50px 0;
+    padding: 0 0 50px 0;
     margin: 0;
 }
 
@@ -111,21 +110,85 @@ $cardColors: (
     flex-grow: 1;
     display: inline-flex;
     justify-content: center;
-    filter: grayscale(100%) opacity(80%);
-    padding: 0px 20px;
-
-    &:hover{
-        filter:none;
-    }
+    padding: 50px 20px 0 20px;
+    position:relative;
 
     & img{
-        max-width: 100%;
+        max-width: 100%;        
+        filter: grayscale(100%) opacity(80%);      
     }
+
+    &:hover{
+        & img{
+            filter:none;
+        }
+        & .explainer{
+            display:block;
+        }
+    }
+
+
+
+    & .explainer{
+        position: absolute;
+        bottom: 100%;
+        width: 260px;
+        padding:20px;
+        background-color: $primary-color;
+        color: $white;
+        text-align:center;
+        display:none;
+
+        & h3{
+            font-size:1.125rem;
+            padding-bottom: 2rem;
+            margin-bottom:0;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 55px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 28px;
+                height: 3px;
+                display: block;
+                background-color: #fff;
+            }
+        }
+
+        & p{
+            font-size: 0.8125rem;
+            margin-bottom:0;
+        }
+
+        & .arrow{
+            @include triangle($primary-color, 36px);
+            position: absolute;
+            bottom: -35px;
+            left: 94px;
+        }
+
+    }
+}
+
+@media(min-width:map.get($breakpoints,"md")){
+    .clients{
+        display:block;
+    }
+
+    .news-items>:last-child{
+        display:none;
+    }    
+}
+@media(min-width:1200px){
+    .news-items>:last-child{
+        display:block;
+    }    
 }
 
 @media(min-width:map.get($breakpoints,"xl")){
     .news-items>:last-child{
         display:block;
-    }
-    
+    }    
 }
