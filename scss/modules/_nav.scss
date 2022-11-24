@@ -116,7 +116,6 @@ $navBgColors: (
         }  
     }
 
-
     //nav triangle
     #{$className}:hover::before{
         @include triangle($color, 92.57px);
@@ -125,11 +124,9 @@ $navBgColors: (
         left:0;
     }
 
-
     #{$className}:hover + .mega-menu{
         display:block;
     }
-
 }
 
 @each $className, $color in $navBgColors {
