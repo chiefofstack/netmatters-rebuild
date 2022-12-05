@@ -113,7 +113,7 @@ p {
 }
 
 .btn-welcome{
-    background-color: #272936;
+    background-color: #272936;    
     color: $white;
     &:hover{
         background-color: #121318;
@@ -121,6 +121,15 @@ p {
     }
 }
 
+.btn-subscribe{
+    background-color: #333645;
+    color: $white;
+    &:hover{
+        background-color: #121318;
+        color: $white;
+    }
+}
+ 
 .btn-google{ 
     background-color: #4387f6;
     color: $white;
