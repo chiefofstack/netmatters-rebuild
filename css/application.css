@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -338,6 +339,15 @@ p {
   color: #ffffff;
 }
 
+.btn-subscribe {
+  background-color: #333645;
+  color: #ffffff;
+}
+.btn-subscribe:hover {
+  background-color: #121318;
+  color: #ffffff;
+}
+
 .btn-google {
   background-color: #4387f6;
   color: #ffffff;
@@ -438,6 +448,7 @@ p {
   margin-left: -66px;
   box-shadow: none;
   padding: 17px 21px;
+  border-radius: 0 3px 3px 0;
 }
 
 .btn-search i, .btn-search-input i, .btn-call i {
@@ -1032,6 +1043,7 @@ h4.section-link a:hover {
   transition: 0.5s ease;
   background-color: #ffffff;
   margin-top: 20px;
+  min-height: 315px;
 }
 .card i {
   display: flex;
@@ -1457,18 +1469,37 @@ h4.section-link a:hover {
   vertical-align: top;
 }
 
-.opt-in {
+.opt-in + label {
+  display: inline-block;
   width: 2rem;
   height: 2rem;
+  border: 3px solid #333645;
+  border-radius: 3px;
+  cursor: pointer;
   margin-right: 20px;
 }
 
-.opt-in:checked {
-  accent-color: #333645;
+.opt-in:checked + label {
+  background-color: #333645;
+}
+.opt-in:checked + label:after {
+  position: relative;
+  top: -5px;
+  left: 4px;
+  content: "✔";
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.opt-in {
+  display: none;
 }
 
 .description {
   font-weight: bold;
+}
+.description label {
+  cursor: pointer;
 }
 
 .footer {
