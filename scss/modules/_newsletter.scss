@@ -50,17 +50,40 @@
     vertical-align:top;
 }
 
-.opt-in{
-    width:2rem;
-    height:2rem;
+.opt-in + label {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 3px solid #333645;
+    border-radius: 3px;
+    cursor: pointer;
     margin-right:20px;
 }
 
-.opt-in:checked{
-    accent-color:$primary-color;
+.opt-in:checked {
+    & + label {
+        background-color: $primary-color;  
+    }  
+    & + label:after {
+        position: relative;
+        top: -5px;
+        left: 4px;
+        content: '\2714';
+        font-size: 1.5rem;
+        color: $white;
+    }
 }
+
+.opt-in {
+    display: none;
+}
+
 .description{
     font-weight:bold;
+
+    & label{
+        cursor: pointer;
+    }
 }
 
 
