@@ -1,23 +1,23 @@
 @use "sass:map";
 
 $navColors: (
-  "a.software": $software-color,
-  "a.support": $support-color,
-  "a.marketing": $marketing-color,
-  "a.services": $services-color,
-  "a.design": $design-color,
-  "a.security": $security-color,
-  "a.course": $training-color
+  "li.software": $software-color,
+  "li.support": $support-color,
+  "li.marketing": $marketing-color,
+  "li.services": $services-color,
+  "li.design": $design-color,
+  "li.security": $security-color,
+  "li.course": $training-color
 );
 
 $navBgColors: (
-  "a.software": $software-bg-color,
-  "a.support": $support-bg-color,
-  "a.marketing": $marketing-bg-color,
-  "a.services": $services-bg-color,
-  "a.design": $design-bg-color,
-  "a.security": $security-bg-color,
-  "a.course": $course-bg-color
+  "li.software": $software-bg-color,
+  "li.support": $support-bg-color,
+  "li.marketing": $marketing-bg-color,
+  "li.services": $services-bg-color,
+  "li.design": $design-bg-color,
+  "li.security": $security-bg-color,
+  "li.course": $course-bg-color
 );
 
 .topbar{
@@ -106,7 +106,7 @@ $navBgColors: (
 }
 
 @each $className, $color in $navColors {
-    #{$className} i{    
+    #{$className} a i{    
         color: #{$color};       
     }
 
@@ -118,20 +118,20 @@ $navBgColors: (
     }
 
     //nav triangle
-    #{$className}:hover::before{
-        @include triangle($color, 92.57px);
+    #{$className}:hover > a::before{
+        @include triangle($color, null);
         position: absolute;
         bottom:-35px;
         left:0;
     }
 
-    #{$className}:hover + .mega-menu{
+    #{$className} a:hover + .mega-menu{
         display:block;
     }
 }
 
 @each $className, $color in $navBgColors {
-    #{$className} + .mega-menu{
+    #{$className} a + .mega-menu{
         position: absolute;
         display: none;
         background-color: $color;
@@ -251,7 +251,7 @@ $navBgColors: (
         display:block;
     }
     $size : ((map.get($navWidths, "lg") / 7) / 2 ) + 0px;
-    .nav__item a:hover::before{
+    li.nav__item:hover > a::before{
         @include triangle(null, $size);
 
     }
@@ -259,7 +259,7 @@ $navBgColors: (
 
 @media (min-width: map.get($breakpoints, "xl")) {
     $size : ((map.get($navWidths, "xl") / 7) / 2 ) + 0px;
-    .nav__item a:hover::before{
+    li.nav__item:hover > a::before{
         @include triangle(null, $size);
     }
 
@@ -277,7 +277,7 @@ $navBgColors: (
 
 @media (min-width: map.get($breakpoints, "xxl")) {
     $size : ((map.get($navWidths, "xxl") / 7) / 2 ) + 0px;
-    .nav__item a:hover::before{
+    li.nav__item:hover > a::before{
         @include triangle(null, $size);
     }
 }
