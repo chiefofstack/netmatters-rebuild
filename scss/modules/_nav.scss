@@ -250,7 +250,7 @@ $navBgColors: (
     .navibar{
         display:block;
     }
-    $size : ((map.get($navWidths, "lg") / 7) / 2 ) + 0px;
+    $size : calc(calc(map.get($navWidths, "lg") / 7) / 2 ) + 0px;
     li.nav__item:hover > a::before{
         @include triangle(null, $size);
 
@@ -258,7 +258,7 @@ $navBgColors: (
 }
 
 @media (min-width: map.get($breakpoints, "xl")) {
-    $size : ((map.get($navWidths, "xl") / 7) / 2 ) + 0px;
+    $size : calc(calc(map.get($navWidths, "xl") / 7) / 2 ) + 0px;
     li.nav__item:hover > a::before{
         @include triangle(null, $size);
     }
@@ -276,7 +276,7 @@ $navBgColors: (
 
 
 @media (min-width: map.get($breakpoints, "xxl")) {
-    $size : ((map.get($navWidths, "xxl") / 7) / 2 ) + 0px;
+    $size : calc(calc(map.get($navWidths, "xxl") / 7) / 2 ) + 0px;
     li.nav__item:hover > a::before{
         @include triangle(null, $size);
     }
