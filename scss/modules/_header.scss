@@ -1,0 +1,39 @@
+@use "sass:map";
+
+body > header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    transition: all 300ms ease-in-out;
+}
+
+body > .banner{
+    margin-top:169px;
+}
+
+@media (min-width: map.get($breakpoints, "xs")) {
+    body > .banner{
+        margin-top:169px;
+    }
+}
+
+@media (min-width: map.get($breakpoints, "md")) {
+    body > .banner{
+        margin-top:102px;
+    }
+}
+@media (min-width: map.get($breakpoints, "lg")) {
+    body > .banner{
+        margin-top:213px;
+    }
+}
+
+// body.scroll-down {
+//     margin-top:215px;
+// }
+
+// body.scroll-up s{
+//     margin-top:0;
+// }
