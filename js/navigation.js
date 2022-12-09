@@ -1,5 +1,6 @@
 //Sticky head navigation
 const header = $(".header");
+const banner = $(".banner");
 let lastScroll = 0;
 
 
@@ -7,46 +8,75 @@ let lastScroll = 0;
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
     
-    //if scrolled beyond the nav, slide the nav up or down
-    if(currentScroll > header.height()){
-        // if scrolled down, slide the nav up 
-        if (currentScroll > lastScroll) {
-            //  if have scrolled beyond the nav before, just do as normal slide up
-            if(header.hasClass('haveScrolledUp')){                
-                header.css({ "top": -header.height() });  
-                header.addClass("sticky");  
-            }
-            else{ //if not, apply sticky position first and move up without transition
-                header.addClass("sticky"); 
-                header.css({ "top": -header.height(), "transition":"none" });
-            }
-        }
-        // if scrolled up, slide the nav down up
+    // For debugging - Shows current scroll with current header top position 
+    // console.log("Scroll:" + currentScroll, "Height:" + header.height(), "top:" + header.css('top'), "position:" + header.css('position'));
+    
+ 
+    // if scrolled right before the header bottom
+    if(currentScroll > header.height() - 10 && currentScroll <= header.height() + 10){
+    
+        //if scrolled down
+        if (currentScroll > lastScroll) {    
+            console.log("LAST SCROLL DOWN");  
+            header.css({ 
+                "top": -header.height(),
+                "transition": "all 300ms ease-in-out"
+            }); 
+        }    
+        // if scrolled up, put the nav to top immediately without transition
         if (currentScroll < lastScroll) {            
-            header.removeAttr("style"); //clear styles to activate default transition
-            header.css({ "top":"0" });
-            header.addClass('haveScrolledUp');
-            
+            console.log("LAST SCROLL UP");
+            header.css({ 
+                "top": "0",
+                "transition": "all 300ms ease-in-out"
+            });
         }
-            
     }
 
-    //if scrolled within the nav
-    else if (currentScroll <= header.height() && currentScroll != 0){   
-        // if scrolled up, return the nav default position
-        if (currentScroll < lastScroll) {
-            header.css({ "top":"0" });       
-        } 
-    }    
+    // if scrolled within the nav, fix the whitespace
+    else if(currentScroll > 0 && currentScroll <= header.height()){
+        //if scrolled down
+        if (currentScroll > lastScroll) {            
+            header.removeAttr('style');
+            banner.removeAttr('style');
+        }    
+        // if scrolled up, put the nav to top immediately without transition
+        if (currentScroll < lastScroll) {            
+            header.css({ 
+                        "top": "0",
+                        "transition":"none"
+                    });
+        }
+    }
+
+    // if scrolled beyond the nav, just do the default nav slide animations
+    else if(currentScroll > header.height()){
+        // if scrolled down, slide nav up (hide nav)
+        if (currentScroll > lastScroll) {
+            header.css({ 
+                        "position":"fixed", 
+                        "top": -header.height(), 
+                        "width":"100%", 
+                        "z-index":"2",
+                        "transition": "all 300ms ease-in-out"
+                        });
+            banner.css({ "margin-top": header.height() });
+        }
+
+        // if scrolled up, slide nav down (show nav)
+        if (currentScroll < lastScroll) {            
+            header.css({ 
+                        "top": "0",
+                    });
+        }
+    }
 
     // if scrolled to the top
-    else if(currentScroll == 0){
+   else if( currentScroll == 0){
         header.removeAttr("style");
-        header.removeClass('sticky');
-        header.removeClass('haveScrolledUp'); 
-        
+        banner.removeAttr("style");
     }
-    
+
     // store next scroll for next time
     lastScroll = currentScroll;
 });
