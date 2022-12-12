@@ -1,6 +1,6 @@
 @use "sass:map";
 
-.slideshow{
+.slide-item{
     display: flex;
     min-height: 550px;
     background: 
@@ -44,31 +44,50 @@
     
 }
 
-
-.slideshow-buttons{
-    margin-top: -50px;
+.tns-outer{
+    min-height:550px;
 }
 
-.dots{
+.tns-nav{
     display:flex;
     justify-content:center;
-    padding-left:0;
+    align-items: center;
+    margin-top: -50px;
+    z-index: 9;
+    position: relative;
 }
 
-.dot{
-    list-style:none;
-    & span{
-        background-color: hsla(0,0%,100%,.5);
-        width:11px;
-        height:11px;
-        margin: 0 10px;
-        background: #d6d6d6;
-        display:block;
-        border-radius: 30px;
-        cursor:pointer;
+.tns-nav button{
+    display:block;
+    width: 12px;
+    height:12px;
+    padding:0;
+    margin: 0 10px;
+    background-color: rgba(255, 255, 255, 0.555);
+    cursor:pointer;
+    border-radius:50%; 
+    border:none; 
+
+    &.tns-nav-active{
+        background-color: rgba(255, 255, 255, 0.911);
     }
-    
+
+    &.tns-nav-active::before{
+        content: "";
+        position: relative;
+        top: -7px;
+        left: -7px;
+        z-index: 10;
+        width: 26px;
+        height: 26px;
+        border: 2px solid rgba(255, 255, 255, 0.911);
+        display: block;
+        border-radius: 50%;
+    }
 }
+
+
+
 
 @media (min-width:map.get($breakpoints,"xs")){
     .slide-text{
