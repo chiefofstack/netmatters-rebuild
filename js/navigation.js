@@ -1,31 +1,46 @@
-//Sticky head navigation
+// For sticky head navigation
 const header = $(".header");
 const banner = $(".banner");
+const main = $("main");
+
+// For sidebar popup
+const btnKeyword = $(".btn-search-input .input-field");
+const overlay = $(".overlay");
+const sidebar = $(".sidebar");
+const body = $("body");
+const btnToggle = $(".btn-toggle");
+
 let lastScroll = 0;
+let toggled = false;
 
+/* -------------- Sticky header -------------- */
 
-// When scrolled
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
+
+    // Move grid items into position while still hiden
+    overlay.css({
+        "top": currentScroll,
+        "transition":"none"
+    });
+    sidebar.css({
+        "top": currentScroll,
+        position:"relative",
+        "transition":"none"
+    });    
     
-    // For debugging - Shows current scroll with current header top position 
-    // console.log("Scroll:" + currentScroll, "Height:" + header.height(), "top:" + header.css('top'), "position:" + header.css('position'));
-    
- 
     // if scrolled right before the header bottom
     if(currentScroll > header.height() - 10 && currentScroll <= header.height() + 10){
     
         //if scrolled down
         if (currentScroll > lastScroll) {    
-            console.log("LAST SCROLL DOWN");  
             header.css({ 
                 "top": -header.height(),
                 "transition": "all 300ms ease-in-out"
             }); 
         }    
         // if scrolled up, put the nav to top immediately without transition
-        if (currentScroll < lastScroll) {            
-            console.log("LAST SCROLL UP");
+        if (currentScroll < lastScroll) {     
             header.css({ 
                 "top": "0",
                 "transition": "all 300ms ease-in-out"
@@ -50,13 +65,13 @@ window.addEventListener("scroll", () => {
     }
 
     // if scrolled beyond the nav, just do the default nav slide animations
-    else if(currentScroll > header.height()){
+    else if(currentScroll > header.height() && !toggled){
         // if scrolled down, slide nav up (hide nav)
         if (currentScroll > lastScroll) {
             header.css({ 
                         "position":"fixed", 
                         "top": -header.height(), 
-                        "width":"100%", 
+                        "width": "100%", 
                         "z-index":"2",
                         "transition": "all 300ms ease-in-out"
                         });
@@ -72,11 +87,13 @@ window.addEventListener("scroll", () => {
     }
 
     // if scrolled to the top
-   else if( currentScroll == 0){
+    else if( currentScroll == 0){
         header.removeAttr("style");
         banner.removeAttr("style");
-    }
+    }  
+
 
     // store next scroll for next time
     lastScroll = currentScroll;
 });
+
