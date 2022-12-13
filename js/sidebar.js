@@ -21,7 +21,6 @@ btnToggle.on('click', (event) => {
     });
 
      
-    body.css({"overflow-y":"hidden"});
 
 });
 
@@ -46,7 +45,6 @@ overlay.on('click', (event) => {
     
         toggled = false;
 
-        body.css({"overflow-y":"scroll"});
     }
 
 });
