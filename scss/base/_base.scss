@@ -107,6 +107,52 @@ header {
         color: $white;
     }
 }
+
+.btn-marketing{
+    background-color: $marketing-color;
+    color: $white;
+    &:hover{
+        background-color: $marketing-color;
+        color: $white;
+    }
+}
+
+.btn-services{
+    background-color: $services-color;
+    color: $white;
+    &:hover{
+        background-color: $services-color;
+        color: $white;
+    }
+}
+
+.btn-design{
+    background-color: $design-color;
+    color: $white;
+    &:hover{
+        background-color: $design-color;
+        color: $white;
+    }
+}
+
+.btn-security{
+    background-color: $security-color;
+    color: $white;
+    &:hover{
+        background-color: $security-color;
+        color: $white;
+    }
+}
+
+.btn-training{
+    background-color: $training-color;
+    color: $white;
+    &:hover{
+        background-color: $training-color;
+        color: $white;
+    }
+}
+
 .btn-trust{
     background-color: #00b67b;
     color: $white;
@@ -143,24 +189,46 @@ header {
     }
 }
 
-.hamburger {    
-    display: block;
-    position: relative;
+.btn-toggle .hamburger, .btn-toggle .hamburger::before, .btn-toggle .hamburger::after {
     width: 30px;
-    height: 18px;
-    border-top: solid 3px $white;
-    border-bottom: solid 3px $white;
+    height: 4px;
+    background-color: $white;
+    border-radius: 1px;
+    position: absolute;
+}
 
-    &:before{
-        display:block;
-        position: absolute;
-        content: '';
-        width: 30px;
-        height: 3px;
-        background: $white;
-        top: 4px;   
+.btn-toggle .hamburger {
+    &::before, &::after{
+        content: "";
+        display: block;
+    }
+
+    &::before{
+        top: -10px;
+        transition: bottom 0.1s 0.25s ease-in, transform 0.22s;
+        
+    }
+
+    &::after{
+        top: 10px;
+        transition: bottom 0.1s 0.25s ease-in, transform 0.22s;
     }
 }
+
+.btn-toggle.active .hamburger{
+    height:auto;
+
+    &::before{
+        top:-1px;    
+        transform: rotate(315deg);
+    }
+    &::after{
+        top:-1px;
+        transform: rotate(225deg);
+    }
+}
+
+
 
 .input-field{
     height: 47px;
