@@ -325,6 +325,51 @@ header {
   color: #ffffff;
 }
 
+.btn-marketing {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+.btn-marketing:hover {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+
+.btn-services {
+  background-color: #d64541;
+  color: #ffffff;
+}
+.btn-services:hover {
+  background-color: #d64541;
+  color: #ffffff;
+}
+
+.btn-design {
+  background-color: #926fb1;
+  color: #ffffff;
+}
+.btn-design:hover {
+  background-color: #926fb1;
+  color: #ffffff;
+}
+
+.btn-security {
+  background-color: #f62459;
+  color: #ffffff;
+}
+.btn-security:hover {
+  background-color: #f62459;
+  color: #ffffff;
+}
+
+.btn-training {
+  background-color: #ce4125;
+  color: #ffffff;
+}
+.btn-training:hover {
+  background-color: #ce4125;
+  color: #ffffff;
+}
+
 .btn-trust {
   background-color: #00b67b;
   color: #ffffff;
@@ -361,22 +406,47 @@ header {
   color: #ffffff;
 }
 
-.hamburger {
-  display: block;
-  position: relative;
-  width: 30px;
-  height: 18px;
-  border-top: solid 3px #ffffff;
-  border-bottom: solid 3px #ffffff;
+.btn-disabled {
+  background-color: #ffffff;
+  color: #aaa;
+  border: 1px solid #f0f0f0;
 }
-.hamburger:before {
-  display: block;
-  position: absolute;
-  content: "";
+.btn-disabled:hover {
+  background-color: #ffffff;
+  color: #aaa;
+}
+
+.btn-toggle .hamburger, .btn-toggle .hamburger::before, .btn-toggle .hamburger::after {
   width: 30px;
-  height: 3px;
-  background: #ffffff;
-  top: 4px;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 1px;
+  position: absolute;
+}
+
+.btn-toggle .hamburger::before, .btn-toggle .hamburger::after {
+  content: "";
+  display: block;
+}
+.btn-toggle .hamburger::before {
+  top: -10px;
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s;
+}
+.btn-toggle .hamburger::after {
+  top: 10px;
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s;
+}
+
+.btn-toggle.active .hamburger {
+  height: auto;
+}
+.btn-toggle.active .hamburger::before {
+  top: -1px;
+  transform: rotate(315deg);
+}
+.btn-toggle.active .hamburger::after {
+  top: -1px;
+  transform: rotate(225deg);
 }
 
 .input-field {
@@ -477,6 +547,7 @@ header {
 }
 
 .btn-toggle {
+  width: 60px;
   padding: 18px 15px;
   margin-right: 0 !important;
 }
@@ -536,6 +607,7 @@ li.software:hover > a::before {
   z-index: 1;
   border-style: solid;
   border-width: 35px 0;
+  z-index: 4;
   border-color: #67809f transparent transparent;
   position: absolute;
   bottom: -35px;
@@ -564,6 +636,7 @@ li.support:hover > a::before {
   z-index: 1;
   border-style: solid;
   border-width: 35px 0;
+  z-index: 4;
   border-color: #4183d7 transparent transparent;
   position: absolute;
   bottom: -35px;
@@ -592,6 +665,7 @@ li.marketing:hover > a::before {
   z-index: 1;
   border-style: solid;
   border-width: 35px 0;
+  z-index: 4;
   border-color: #2ecc71 transparent transparent;
   position: absolute;
   bottom: -35px;
@@ -620,6 +694,7 @@ li.services:hover > a::before {
   z-index: 1;
   border-style: solid;
   border-width: 35px 0;
+  z-index: 4;
   border-color: #d64541 transparent transparent;
   position: absolute;
   bottom: -35px;
@@ -648,6 +723,7 @@ li.design:hover > a::before {
   z-index: 1;
   border-style: solid;
   border-width: 35px 0;
+  z-index: 4;
   border-color: #926fb1 transparent transparent;
   position: absolute;
   bottom: -35px;
@@ -676,6 +752,7 @@ li.security:hover > a::before {
   z-index: 1;
   border-style: solid;
   border-width: 35px 0;
+  z-index: 4;
   border-color: #f62459 transparent transparent;
   position: absolute;
   bottom: -35px;
@@ -704,6 +781,7 @@ li.course:hover > a::before {
   z-index: 1;
   border-style: solid;
   border-width: 35px 0;
+  z-index: 4;
   border-color: #ce4125 transparent transparent;
   position: absolute;
   bottom: -35px;
@@ -780,6 +858,7 @@ li.course a + .mega-menu {
 .nav__item .mega-menu {
   color: #ffffff;
   text-align: left;
+  z-index: 3;
 }
 .nav__item .mega-menu:hover {
   display: block;
@@ -876,6 +955,7 @@ li.course a + .mega-menu {
     z-index: 1;
     border-style: solid;
     border-width: 35px 67.1428571429px 0;
+    z-index: 4;
   }
 }
 @media (min-width: 1260px) {
@@ -886,6 +966,7 @@ li.course a + .mega-menu {
     z-index: 1;
     border-style: solid;
     border-width: 35px 87px 0;
+    z-index: 4;
   }
   .topbar-links .btn-search-input {
     display: block;
@@ -902,12 +983,48 @@ li.course a + .mega-menu {
     z-index: 1;
     border-style: solid;
     border-width: 35px 87.8571428571px 0;
+    z-index: 4;
   }
 }
+.banner {
+  transition: 0.5s;
+}
+
+#tns1-item0 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/home-banner.webp") center/cover no-repeat;
+}
+
+#tns1-item1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner2.jpg") center/cover no-repeat;
+}
+
+#tns1-item2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner3.webp") center/cover no-repeat;
+}
+
+#tns1-item3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner4.webp") center/cover no-repeat;
+}
+
+#tns1-item4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner5.webp") center/cover no-repeat;
+}
+
+#tns1-item5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner6.jpg") center/cover no-repeat;
+}
+
+#tns1-item6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner7.webp") center/cover no-repeat;
+}
+
+#tns1-item7 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner8.webp") center/cover no-repeat;
+}
+
 .slide-item {
   display: flex;
   min-height: 550px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/home-banner.webp") center/cover no-repeat;
 }
 
 .slide-text {
@@ -940,7 +1057,7 @@ li.course a + .mega-menu {
   margin: 0 0 0 13px;
 }
 
-.tns-outer {
+#tns1-ow {
   min-height: 550px;
 }
 
@@ -949,7 +1066,7 @@ li.course a + .mega-menu {
   justify-content: center;
   align-items: center;
   margin-top: -50px;
-  z-index: 9;
+  z-index: 2;
   position: relative;
 }
 
@@ -972,7 +1089,7 @@ li.course a + .mega-menu {
   position: relative;
   top: -7px;
   left: -7px;
-  z-index: 10;
+  z-index: 2;
   width: 26px;
   height: 26px;
   border: 2px solid rgba(255, 255, 255, 0.911);
@@ -1013,7 +1130,7 @@ li.course a + .mega-menu {
     text-align: left;
     font-size: 4rem;
     line-height: 5rem;
-    margin: 0 auto;
+    margin: 0;
   }
   .slide-text p {
     font-size: 1.625rem;
@@ -1322,6 +1439,7 @@ h4.section-link a:hover {
 
 .news-item p {
   color: #666;
+  min-height: 70px;
 }
 
 .btn-flag {
@@ -1429,6 +1547,7 @@ h4.section-link a:hover {
   z-index: 1;
   border-style: solid;
   border-width: 35px 36px 0;
+  z-index: 4;
   border-color: #333645 transparent transparent;
   position: absolute;
   bottom: -35px;
@@ -1656,6 +1775,9 @@ main {
 }
 
 .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   visibility: hidden;
   top: 0;
@@ -1663,7 +1785,7 @@ main {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0);
-  z-index: 2;
+  z-index: 5;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -1773,6 +1895,120 @@ main {
   }
   .default-menu .support-item {
     display: none;
+  }
+}
+.overlay {
+  cursor: default;
+}
+
+.cookie-consent {
+  visibility: hidden;
+  width: 90%;
+  max-width: 600px;
+  min-height: 300px;
+  z-index: 6;
+  border-radius: 4px;
+  background-color: #ffffff;
+  transition: 0.5s;
+}
+.cookie-consent.active {
+  visibility: visible;
+}
+.cookie-consent .mdl-header, .cookie-consent .mdl-body, .cookie-consent .mdl-footer {
+  padding: 15px 20px;
+}
+.cookie-consent .mdl-header {
+  border-bottom: 1px solid #e5e5e5;
+}
+.cookie-consent .mdl-header h4 {
+  line-height: 2.3rem;
+  margin: 0;
+  color: #333645;
+}
+.cookie-consent .mdl-body {
+  color: #666;
+  line-height: 1.8rem;
+}
+.cookie-consent .mdl-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+.cookie-consent .mdl-footer .btn {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.cookie-consent .mdl-footer .btn:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.cookie-overlay {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 5;
+}
+.cookie-overlay.active {
+  visibility: visible;
+  background-color: #fff;
+}
+.cookie-overlay h2, .cookie-overlay h4 {
+  color: #333645;
+  margin-top: 30px;
+}
+.cookie-overlay p {
+  font-size: 0.9rem;
+}
+.cookie-overlay .example {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333645;
+}
+.cookie-overlay .option-group {
+  text-align: left;
+}
+.cookie-overlay .no-header {
+  margin-top: 20px;
+}
+.cookie-overlay .btn-default:hover {
+  color: #ffffff;
+}
+.cookie-overlay .table {
+  margin: 30px 0 50px 0;
+  display: none;
+}
+.cookie-overlay .table thead tr td {
+  border: 1px solid #fff;
+  background-color: #aaa;
+  padding: 15px;
+  min-height: 20px;
+  color: #fff;
+}
+.cookie-overlay .table tbody tr td {
+  border: 1px solid #fff;
+  background-color: #ddd;
+  padding: 15px;
+  min-height: 20px;
+}
+.cookie-overlay .table tbody tr {
+  border: 1px solid #ffffff;
+}
+.cookie-overlay .table tbody tr td:nth-child(3) {
+  text-align: right;
+}
+.cookie-overlay .foot {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+  .cookie-overlay .option-group {
+    text-align: right;
   }
 }
 
