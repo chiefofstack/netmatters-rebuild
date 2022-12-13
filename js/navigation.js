@@ -1,6 +1,7 @@
 // For sticky head navigation
 const header = $(".header");
 const banner = $(".banner");
+const tinySlider1 = $("#tns1-ow");
 const main = $("main");
 
 // For sidebar popup
@@ -17,7 +18,7 @@ let toggled = false;
 
 window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
-
+    
     // Move grid items into position while still hiden
     overlay.css({
         "top": currentScroll,
@@ -53,7 +54,8 @@ window.addEventListener("scroll", () => {
         //if scrolled down
         if (currentScroll > lastScroll) {            
             header.removeAttr('style');
-            banner.removeAttr('style');
+            // banner.removeAttr('style');
+            tinySlider1.removeAttr('style');
         }    
         // if scrolled up, put the nav to top immediately without transition
         if (currentScroll < lastScroll) {            
@@ -72,10 +74,11 @@ window.addEventListener("scroll", () => {
                         "position":"fixed", 
                         "top": -header.height(), 
                         "width": "100%", 
-                        "z-index":"2",
+                        "z-index":"3",
                         "transition": "all 300ms ease-in-out"
                         });
-            banner.css({ "margin-top": header.height() });
+            //banner.css({ "margin-top": header.height() });
+            tinySlider1.css({ "margin-top": header.height() });
         }
 
         // if scrolled up, slide nav down (show nav)
@@ -89,7 +92,9 @@ window.addEventListener("scroll", () => {
     // if scrolled to the top
     else if( currentScroll == 0){
         header.removeAttr("style");
-        banner.removeAttr("style");
+       // banner.removeAttr("style");
+       tinySlider1.removeAttr("style");
+       
     }  
 
 
