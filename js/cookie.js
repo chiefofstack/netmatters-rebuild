@@ -26,8 +26,8 @@ function getCookie(cookieName) {
 $(window).on('load', () => {   
     if(!getCookie("accepted")){
         overlay.addClass("active");    
-        cookieConsent.addClass("active");         
-        body.css({"overflow-y":"hidden"});
+        cookieConsent.addClass("active");  
+        body.addClass("no-scroll"); 
     }        
 });
 
@@ -38,15 +38,15 @@ btnChange.on('click', () => {
 
     //show cookie overlay
     cookieOverlay.addClass("active");
-    body.css({"overflow-y":"hidden"});
-    cookieOverlay.css({"overflow-y":"scroll"});
+    
+   
 });
 
 btnAccept.on('click', () => {    
     setCookie("accepted", true, 365);
     overlay.removeClass("active"); 
-    cookieConsent.removeClass("active");    
-    body.css({"overflow-y":"scroll"});
+    cookieConsent.removeClass("active");        
+    body.removeClass("no-scroll");   
 });
 
 
@@ -59,14 +59,13 @@ btnCancel.on('click', () => {
 
     //hide consent Overlay
     cookieOverlay.removeClass("active");
-    cookieOverlay.css({"overflow-y":"scroll"});
 
 });
 
 btnContinue.on('click', () => {    
     setCookie("accepted", true, 365);
-    cookieOverlay.removeClass("active");     
-    body.css({"overflow-y":"scroll"});
+    cookieOverlay.removeClass("active");
+    body.removeClass("no-scroll");   
 });
 
 btnPreferences.on('click', () => {
