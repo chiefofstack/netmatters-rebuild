@@ -64,6 +64,7 @@ $navBgColors: (
 }
 
 .btn-toggle{
+    width:60px;
     padding: 18px 15px;
     margin-right: 0 !important;
 }
@@ -145,6 +146,7 @@ $navBgColors: (
 .nav__item .mega-menu{
     color: $white;
     text-align:left;
+    z-index:3;
 
     &:hover{
         display:block;
