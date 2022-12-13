@@ -20,25 +20,35 @@ btnToggle.on('click', (event) => {
         "visibility":"invisible"
     });
 
+     
+    body.css({"overflow-y":"hidden"});
+
 });
 
 // hide sidebar
-overlay.on('click', (event) => {
-    if(btnToggle.hasClass('active')){
-        body.removeClass("has-sidebar");
-        btnToggle.removeClass("active");
-        overlay.removeClass("active");        
+overlay.on('click', (event) => {    
+    
+    if(!cookieConsent.hasClass("active")){ //only hide overlay if cookie consent  is not displayed
+        
+        if(btnToggle.hasClass('active')){
+            body.removeClass("has-sidebar");
+            btnToggle.removeClass("active");
+            overlay.removeClass("active");        
+        }
+        header.css({ 
+            "width": "100%", 
+            "transition": "0.5s"
+        });   
+    
+        btnKeyword.css({
+            "width":"300px"
+        });
+    
+        toggled = false;
+
+        body.css({"overflow-y":"scroll"});
     }
-    header.css({ 
-        "width": "100%", 
-        "transition": "0.5s"
-    });   
 
-    btnKeyword.css({
-        "width":"300px"
-    });
-
-    toggled = false;
 });
 
 
