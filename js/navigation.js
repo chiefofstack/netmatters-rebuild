@@ -11,6 +11,17 @@ const sidebar = $(".sidebar");
 const body = $("body");
 const btnToggle = $(".btn-toggle");
 
+// For cookie
+const cookieConsent = $(".cookie-consent");
+const btnAccept = $(".btn-accept");
+const btnChange = $(".btn-change");
+const cookieOverlay = $(".cookie-overlay");
+const btnPreferences = $(".btn-preferences");
+const btnCancel = $(".btn-cancel");
+const btnContinue = $(".btn-continue");
+const prefTable = $(".cookie-overlay .table");
+
+
 let lastScroll = 0;
 let toggled = false;
 
