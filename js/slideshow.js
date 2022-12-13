@@ -14,15 +14,17 @@ var slider = tns({
 });
 
 //Partners Slideshow
-// var partners = tns({
-//     container: ".partner.slider",
-//     slideBy: "page",
-//     loop: true,
-//     touch: true,
-//     controls: false,
-//     mouseDrag: true,
-//     swipeAngle: false,
-//     autoplay: true,
-//     speed: 400,
-//     fixedWidth: 250,
-// });
+var partners = tns({
+    container: ".partners-strip.slider",
+    slideBy: 1,
+    loop: true,
+    touch: true,
+    nav:false,
+    controls: false,
+    mouseDrag: true,
+    swipeAngle: false,
+    autoplay: true,
+    speed: 400,
+    fixedWidth: 250,
+    autoplayDirection: "backward",
+});
