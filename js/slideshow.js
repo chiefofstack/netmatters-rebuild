@@ -9,8 +9,8 @@ var slider = tns({
     lazyload: true,
     navPosition: "bottom",
     nav: true,
-    autoplayHoverPause: true,
-    autoplayButtonOutput: false
+    autoplayButtonOutput: false,
+    loop:true
 });
 
 //Partners Slideshow
