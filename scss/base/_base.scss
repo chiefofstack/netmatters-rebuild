@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Poppins';
     font-size: 16px;
@@ -112,7 +113,7 @@ header {
     background-color: $marketing-color;
     color: $white;
     &:hover{
-        background-color: $marketing-color;
+        background-color: #25a25a;
         color: $white;
     }
 }
@@ -121,7 +122,7 @@ header {
     background-color: $services-color;
     color: $white;
     &:hover{
-        background-color: $services-color;
+        background-color: #bc2c28;
         color: $white;
     }
 }
@@ -130,7 +131,7 @@ header {
     background-color: $design-color;
     color: $white;
     &:hover{
-        background-color: $design-color;
+        background-color: #79539a;
         color: $white;
     }
 }
@@ -139,7 +140,7 @@ header {
     background-color: $security-color;
     color: $white;
     &:hover{
-        background-color: $security-color;
+        background-color: #de093f;
         color: $white;
     }
 }
