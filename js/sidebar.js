@@ -6,6 +6,7 @@ btnToggle.on('click', (event) => {
     newWidth = main.width() - sidebar.width();    
     
     body.addClass("has-sidebar");
+    sidebar.removeClass("d-none");
     btnToggle.addClass("active");
     overlay.addClass("active");    
     toggled = true;
@@ -18,9 +19,7 @@ btnToggle.on('click', (event) => {
     btnKeyword.css({
         "width":"0px",
         "visibility":"invisible"
-    });
-
-     
+    });     
 
 });
 
@@ -30,6 +29,7 @@ overlay.on('click', (event) => {
     if(!cookieConsent.hasClass("active")){ //only hide overlay if cookie consent  is not displayed
         
         if(btnToggle.hasClass('active')){
+            sidebar.addClass("d-none");
             body.removeClass("has-sidebar");
             btnToggle.removeClass("active");
             overlay.removeClass("active");        
@@ -38,11 +38,11 @@ overlay.on('click', (event) => {
             "width": "100%", 
             "transition": "0.5s"
         });   
-    
+        
         btnKeyword.css({
             "width":"300px"
         });
-    
+        
         toggled = false;
 
     }
@@ -57,6 +57,10 @@ $(window).on("resize", function(){
         "visibility":"visible"
     });
     
+});
+
+$(window).on("load", () => {    
+    sidebar.addClass("d-none");
 });
 
 
