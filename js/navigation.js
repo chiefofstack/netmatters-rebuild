@@ -27,19 +27,10 @@ let toggled = false;
 
 /* -------------- Sticky header -------------- */
 
-window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset;
-    
-    // Move grid items into position while still hiden
-    overlay.css({
-        "top": currentScroll,
-        "transition":"none"
-    });
-    sidebar.css({
-        "top": currentScroll,
-        position:"relative",
-        "transition":"none"
-    });    
+document.getElementById('main').addEventListener("scroll", () => {
+    var currentScroll = main.scrollTop();
+
+
     
     // if scrolled right before the header bottom
     if(currentScroll > header.height() - 10 && currentScroll <= header.height() + 10){
@@ -65,7 +56,6 @@ window.addEventListener("scroll", () => {
         //if scrolled down
         if (currentScroll > lastScroll) {            
             header.removeAttr('style');
-            // banner.removeAttr('style');
             tinySlider1.removeAttr('style');
         }    
         // if scrolled up, put the nav to top immediately without transition
@@ -84,11 +74,10 @@ window.addEventListener("scroll", () => {
             header.css({ 
                         "position":"fixed", 
                         "top": -header.height(), 
-                        "width": "100%", 
+                        "width": "calc(100% - 17px)", 
                         "z-index":"3",
                         "transition": "all 300ms ease-in-out"
                         });
-            //banner.css({ "margin-top": header.height() });
             tinySlider1.css({ "margin-top": header.height() });
         }
 
@@ -103,8 +92,7 @@ window.addEventListener("scroll", () => {
     // if scrolled to the top
     else if( currentScroll == 0){
         header.removeAttr("style");
-       // banner.removeAttr("style");
-       tinySlider1.removeAttr("style");
+        tinySlider1.removeAttr("style");
        
     }  
 
