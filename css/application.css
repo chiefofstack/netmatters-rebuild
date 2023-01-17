@@ -472,12 +472,7 @@ header {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 100% 0;
-  grid-template-rows: 100vh;
-  transition: 0.5s;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container {
@@ -485,6 +480,24 @@ header {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+main {
+  position: relative;
+  transition: 0.5s;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  right: 0;
+  overflow-y: scroll;
+  z-index: -1;
 }
 
 @media (min-width: 576px) {
@@ -1764,15 +1777,6 @@ h4.section-link a:hover {
     width: auto;
   }
 }
-.has-sidebar {
-  grid-template-columns: calc(100% - 330px) 330px;
-  overflow-y: hidden;
-}
-
-main {
-  position: relative;
-}
-
 .header {
   width: 100%;
   transition: 0.5s;
@@ -1797,13 +1801,13 @@ main {
   visibility: visible;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.overlay.with-form {
+  cursor: default;
+}
 
 .sidebar {
-  overflow-y: scroll;
-  height: 100%;
   width: 330px;
   background: #333645;
-  z-index: 10;
 }
 
 .mobile-menu {
@@ -1901,7 +1905,7 @@ main {
     display: none;
   }
 }
-.overlay {
+.overlay-cookie {
   cursor: default;
 }
 
