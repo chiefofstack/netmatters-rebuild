@@ -26,6 +26,7 @@ function getCookie(cookieName) {
 $(window).on('load', () => {   
     if(!getCookie("accepted")){
         overlay.addClass("active");    
+        overlay.addClass("with-form");    
         cookieConsent.addClass("active");  
         body.addClass("no-scroll"); 
     }        
@@ -34,6 +35,7 @@ $(window).on('load', () => {
 btnChange.on('click', () => {
     //hide consent modal
     overlay.removeClass("active");
+    overlay.removeClass("with-form");
     cookieConsent.removeClass("active");
 
     //show cookie overlay
