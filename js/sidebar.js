@@ -1,26 +1,31 @@
 /* -------------- Sidebar -------------- */
 
+function sidebarTop(){
+    sidebar.css({
+        "z-index": "0",
+    });
+}
+
+
 // show sidebar
 btnToggle.on('click', (event) => {
     event.preventDefault();
-    newWidth = main.width() - sidebar.width();    
+    newWidth = main.width() - sidebar.width();   
     
-    body.addClass("has-sidebar");
-    sidebar.removeClass("d-none");
     btnToggle.addClass("active");
     overlay.addClass("active");    
     toggled = true;
-    header.css({ 
-        "width": main.width() -330, 
-        "transition": "0.5s",
-        "visibility":"visible"
+
+    main.css({
+        "left": "-330px",
+    });
+    overlay.css({
+        "left": "-330px",
     });
 
-    btnKeyword.css({
-        "width":"0px",
-        "visibility":"invisible"
-    });     
-
+    setTimeout(sidebarTop,500);
+    
+    
 });
 
 // hide sidebar
@@ -29,22 +34,22 @@ overlay.on('click', (event) => {
     if(!cookieConsent.hasClass("active")){ //only hide overlay if cookie consent  is not displayed
         
         if(btnToggle.hasClass('active')){
-            sidebar.addClass("d-none");
-            body.removeClass("has-sidebar");
+            
             btnToggle.removeClass("active");
             overlay.removeClass("active");        
         }
-        header.css({ 
-            "width": "100%", 
-            "transition": "0.5s"
-        });   
         
-        btnKeyword.css({
-            "width":"300px"
+        main.css({
+            "left": "0",
+        });
+        overlay.css({
+            "left": "0",
+        });
+        sidebar.css({
+            "z-index": "-1",
         });
         
         toggled = false;
-
     }
 
 });
@@ -59,9 +64,6 @@ $(window).on("resize", function(){
     
 });
 
-$(window).on("load", () => {    
-    sidebar.addClass("d-none");
-});
 
 
 
