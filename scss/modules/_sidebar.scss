@@ -1,14 +1,5 @@
 @use "sass:map";
 
-.has-sidebar{
-    grid-template-columns: calc(100% - 330px) 330px;    
-    overflow-y:hidden;
-}
-
-main{
-    position:relative;
-}
-
 .header{
     width: 100%;
     transition: 0.5s;
@@ -35,14 +26,15 @@ main{
         visibility: visible;
         background-color: rgba(0,0,0,0.5);
     }
+
+    &.with-form{
+        cursor:default;
+    }
 }
 
 .sidebar {
-    overflow-y:scroll;
-    height:100%;
     width:330px;
     background: #333645;
-    z-index:10;
 }
 
 .mobile-menu{    
