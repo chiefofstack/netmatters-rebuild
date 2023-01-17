@@ -1905,10 +1905,6 @@ h4.section-link a:hover {
     display: none;
   }
 }
-.overlay-cookie {
-  cursor: default;
-}
-
 .cookie-consent {
   visibility: hidden;
   width: 90%;
