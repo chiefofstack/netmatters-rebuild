@@ -1,10 +1,5 @@
 .grid{
-    display:grid;
-    grid-template-columns: 100% 0;
-    grid-template-rows: 100vh;
-    transition: 0.5s;
-    overflow-y:scroll;
-    overflow-x:hidden;
+    overflow:hidden;
 }
 
 .container {
@@ -12,6 +7,24 @@
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+main{
+    position:relative;
+    transition: 0.5s;
+    height: 100vh;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    background-color: #fff;
+}
+
+.sidebar{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    right: 0;
+    overflow-y: scroll;
+    z-index: -1;
 }
 
 @media (min-width: 576px){
