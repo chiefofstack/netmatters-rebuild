@@ -14,6 +14,7 @@ btnToggle.on('click', (event) => {
     
     btnToggle.addClass("active");
     overlay.addClass("active");    
+    overlay.removeClass("with-form");
     toggled = true;
 
     main.css({

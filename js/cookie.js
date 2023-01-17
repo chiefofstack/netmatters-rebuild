@@ -47,6 +47,7 @@ btnChange.on('click', () => {
 btnAccept.on('click', () => {    
     setCookie("accepted", true, 365);
     overlay.removeClass("active"); 
+    overlay.removeClass("with-form");
     cookieConsent.removeClass("active");        
     body.removeClass("no-scroll");   
 });
