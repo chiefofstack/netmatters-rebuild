@@ -29,6 +29,7 @@ $(window).on('load', () => {
         overlay.addClass("with-form");    
         cookieConsent.addClass("active");  
         body.addClass("no-scroll"); 
+        html.addClass("overflow-hidden");
     }        
 });
 
@@ -50,6 +51,7 @@ btnAccept.on('click', () => {
     overlay.removeClass("with-form");
     cookieConsent.removeClass("active");        
     body.removeClass("no-scroll");   
+    html.removeClass("overflow-hidden");
 });
 
 
@@ -69,6 +71,7 @@ btnContinue.on('click', () => {
     setCookie("accepted", true, 365);
     cookieOverlay.removeClass("active");
     body.removeClass("no-scroll");   
+    html.removeClass("overflow-hidden");
 });
 
 btnPreferences.on('click', () => {

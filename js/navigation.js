@@ -12,6 +12,7 @@ const body = $("body");
 const btnToggle = $(".btn-toggle");
 
 // For cookie
+const html = $("html");
 const cookieConsent = $(".cookie-consent");
 const btnAccept = $(".btn-accept");
 const btnChange = $(".btn-change");
