@@ -1,4 +1,3 @@
-<?php
         <!-- Overlay -->
         <div class="overlay">
             <div class="cookie-consent">
@@ -119,5 +118,3 @@
                 </div>
             </div>
         </div>
-
-?>
