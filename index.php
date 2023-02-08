@@ -1,5 +1,5 @@
 <?php
-@include 'includes/connection.php';
+@include 'includes/db.php';
 @include 'includes/header.php';
 ?>
 
