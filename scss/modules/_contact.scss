@@ -1,0 +1,125 @@
+@use "sass:map";
+
+.breadcrumbs{
+    box-shadow: 0 5px 35px rgb(0 0 0 / 10%);
+    padding: 14px 0 13px;
+    border-top: 1px solid #333645;
+    display: none;
+
+    & ul{
+        background: none;
+        color: #333645;
+        font-size: .8125rem;
+        margin: 0;
+        padding: 0;
+        & > li{
+            display:inline-block;
+
+            & + li:before{
+                content: "/\A0";
+                padding: 0 5px;
+                color: #333645;
+            }
+
+            & a {
+                color: #333645;
+                font-weight:bold;
+                &:hover{
+                    text-decoration:underline;
+                }
+            }
+        }
+    }
+}
+
+.page-head{
+    background-color: #333645;
+    margin-bottom: 50px;
+    padding: 24px 0;    
+    & h1{
+        font-size: 2.2rem;
+        margin:0;
+        color: #fff;
+    }
+}
+
+.offices{
+    overflow-x:hidden;
+    & .container{
+        margin-bottom: 50px;
+    }
+
+    & .heading{
+        display:none;
+    }
+    & h3{
+        font-weight:normal;
+    }
+    & .card{
+        cursor: default;
+        border-radius: 0 0 1rem 1rem;
+
+        & img{
+            width:100%;
+    
+        }
+
+        & a > h4{
+            font-size:1.2rem;
+            font-weight:normal;
+            color: #333645;
+            margin-bottom:15px;
+
+            &:hover{
+                text-decoration: underline;
+                color: #333645
+            }
+        }
+
+
+
+        & .phone-number{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $design-color;
+            display: block;
+            margin-bottom:15px;
+
+            &:hover{
+                text-decoration:underline;
+            }
+        }
+
+        & .btn-sm{
+            padding: 12px 26px;
+            font-size: 0.8rem;
+        }
+    }
+
+
+}
+
+
+@media(min-width:map.get($breakpoints,"md")){
+    .breadcrumbs{
+        display:block;
+    }
+}
+
+@media(min-width:map.get($breakpoints,"lg")){
+    .page-head{
+        display:none;
+    }
+
+    .offices .heading{
+        display:block;
+    }
+}
+
+@media(min-width:1200px){
+ 
+}
+
+@media(min-width:map.get($breakpoints,"xl")){
+  
+}
