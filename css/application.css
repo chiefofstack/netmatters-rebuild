@@ -1420,28 +1420,52 @@ h4.section-link a:hover {
   color: #666;
 }
 
-.card-gray, .card-gray:hover {
+.card-design, .card-design:hover {
   background-color: #ffffff;
   color: #666;
 }
-.card-gray span.btn, .card-gray span.btn-flag, .card-gray:hover span.btn, .card-gray:hover span.btn-flag {
-  background-color: #67809f;
+.card-design span.btn, .card-design span.btn-flag, .card-design:hover span.btn, .card-design:hover span.btn-flag {
+  background-color: #926fb1;
   color: #ffffff;
 }
-.card-gray h4, .card-gray:hover h4 {
-  color: #67809f;
+.card-design h4, .card-design:hover h4 {
+  color: #926fb1;
 }
 
-.card-green, .card-green:hover {
+.card-marketing, .card-marketing:hover {
   background-color: #ffffff;
   color: #666;
 }
-.card-green span.btn, .card-green span.btn-flag, .card-green:hover span.btn, .card-green:hover span.btn-flag {
+.card-marketing span.btn, .card-marketing span.btn-flag, .card-marketing:hover span.btn, .card-marketing:hover span.btn-flag {
   background-color: #2ecc71;
   color: #ffffff;
 }
-.card-green h4, .card-green:hover h4 {
+.card-marketing h4, .card-marketing:hover h4 {
   color: #2ecc71;
+}
+
+.card-support, .card-support:hover {
+  background-color: #ffffff;
+  color: #666;
+}
+.card-support span.btn, .card-support span.btn-flag, .card-support:hover span.btn, .card-support:hover span.btn-flag {
+  background-color: #4183d7;
+  color: #ffffff;
+}
+.card-support h4, .card-support:hover h4 {
+  color: #4183d7;
+}
+
+.card-security, .card-security:hover {
+  background-color: #ffffff;
+  color: #666;
+}
+.card-security span.btn, .card-security span.btn-flag, .card-security:hover span.btn, .card-security:hover span.btn-flag {
+  background-color: #f62459;
+  color: #ffffff;
+}
+.card-security h4, .card-security:hover h4 {
+  color: #f62459;
 }
 
 .news-wrap {
@@ -1483,6 +1507,9 @@ h4.section-link a:hover {
   margin-top: 30px;
   width: 100%;
   font-size: 0.875rem;
+}
+.author .avatar > img {
+  border-radius: 30px;
 }
 
 .avatar, .info {
