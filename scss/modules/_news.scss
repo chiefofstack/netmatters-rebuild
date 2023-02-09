@@ -1,8 +1,10 @@
 @use "sass:map";
 
 $cardColors: (
-  ".card-gray": $software-color,
-  ".card-green": $marketing-color,
+  ".card-design": $design-color,
+  ".card-marketing": $marketing-color,
+  ".card-support": $support-color,
+  ".card-security": $security-color,
 );
 
 .news{
@@ -77,8 +79,14 @@ $cardColors: (
     padding-top: 30px;
     margin-top: 30px;
     width: 100%;
-    font-size: .875rem;
+    font-size: .875rem;   
+    
+    & .avatar > img {
+        border-radius:30px;
+    }
 }
+
+
 
 .avatar, .info{
     display:table-cell;
