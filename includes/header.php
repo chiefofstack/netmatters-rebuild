@@ -1,7 +1,8 @@
+<?php include 'includes/db.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Netmatters Rebuild by Mark Jason Acab</title>
+        <title><?php echo $currentPage; ?> | Netmatters Rebuild by Mark Jason Acab</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1">   
         <meta charset="utf-8">     
@@ -15,5 +16,7 @@
         <!-- Main Content -->
         <main id="main">
         <?php 
-            include 'nav.php';
+            require 'nav.php';
+            if($currentPage == "Contact")
+            require 'breadcrumbs.php';
         ?>
