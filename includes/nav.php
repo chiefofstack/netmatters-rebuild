@@ -4,7 +4,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-7 col-sm-7 col-md-5 col-lg-4">
-                                <a class="site-logo" href="/">
+                                <a class="site-logo" href="index.php">
                                     <b class="srt">Netmatters</b>
                                 </a>
                             </div>
