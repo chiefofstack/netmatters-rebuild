@@ -319,66 +319,9 @@
                         </div>                    
                     </div>
                     <div class="row news-items">
-                        <div class="col-md-6 col-xl-4">                        
-                            <a href="#" class="card card-gray news-item">                   
-                                <img src="images/business-automation-take-sqif.webp" alt="Business Automation">    
-                                <span data-url="#" class="btn btn-flag">News</span>                            
-                                <div class="news-wrap">
-                                    <h4>Business Automation: Take Your Business to th...</h4>
-                                    <p>In this article we explain everything you need to know about business automation, and why your busin...</p>
-                                    <span class="btn btn-regular">Read more</span>
-                                    <div class="author">
-                                        <div class="avatar">
-                                            <img src="images/netmatters-logo-square.png" class="img-responsive" alt="Netmatters ">
-                                        </div>
-                                        <div class="info">
-                                            <strong>Posted by Netmatters </strong><br>
-                                            28th October 2022
-                                        </div>
-                                    </div>
-                                </div>    
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-xl-4">
-                            <a class="card card-green news-item"> 
-                                <img src="images/6-steps-you-wOc3.webp" alt="6 Steps You Can Do">
-                                <span data-url="#" class="btn btn-flag">News</span>   
-                                <div class="news-wrap">
-                                    <h4>6 Steps You Can Do to Make Your Website More...</h4>
-                                    <p>Making your website visible on Google is one of the most important factors in getting leads through...</p>
-                                    <span class="btn btn-regular">Read more</span>
-                                    <div class="author">
-                                        <div class="avatar">
-                                            <img src="images/netmatters-logo-square.png" class="img-responsive" alt="Netmatters ">
-                                        </div>
-                                        <div class="info">
-                                            <strong>Posted by Netmatters </strong><br>
-                                            28th October 2022
-                                        </div>
-                                    </div>
-                                </div>
-                            </a> 
-                        </div>
-                        <div class="col-md-6 col-xl-4">
-                            <a class="card card-gray news-item">                            
-                                <img src="images/improving-efficiency-with-BLNT.webp" alt="Improving Efficiency">
-                                <span data-url="#" class="btn btn-flag">Case Studies</span>   
-                                <div class="news-wrap">
-                                    <h4>Improving Efficiency With a Bespoke Software...</h4>
-                                    <p>At Netmatters we have a proven track record of building software solutions that improves the efficie...</p>
-                                    <span class="btn btn-regular">Read more</span>
-                                    <div class="author">
-                                        <div class="avatar">
-                                            <img src="images/netmatters-logo-square.png" class="img-responsive" alt="Netmatters ">
-                                        </div>
-                                        <div class="info">
-                                            <strong>Posted by Netmatters </strong><br>
-                                            28th October 2022
-                                        </div>
-                                    </div>
-                                </div>    
-                            </a>
-                        </div>
+                        <?php 
+                            include 'includes/news-items.php';
+                        ?>
                     </div>
                     <div class="row">
                         <div class="col-12">
