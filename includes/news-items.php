@@ -3,36 +3,54 @@ include 'functions.php';
 
 $dbConnection = new databaseObject("localhost","developer","developer","netmatters");
 
-if(!$dbConnection->error)
-{   
-    $news = $dbConnection->getNews();
-    foreach($news as $newsItem){
+        if(isset($dbConnection->error))
+        {   
+                //connection error                                          
+                echo   '<div class="col-md-12" style="display:block">
+                            <div class="alert alert-danger" >
+                                Error connecting to the database
+                            </div>
+                        </div>';
+        }else{
+            $news = $dbConnection->getNews();
+
+            //loop through each item
+            foreach($news as $newsItem){
                 if($newsItem['last_name'] == "Inc")
-                   $newsItem['last_name'] = '';
+                    $newsItem['last_name'] = '';
+
+                    // escape outputs
+                    $title = strip_tags($newsItem['title']);
+                    $content = strip_tags($newsItem['content']);
+                    $slug = strip_tags($newsItem['slug']);
+                    $publishedOn = strip_tags($newsItem['published_on']);
+                    $featuredImage = strip_tags($newsItem['featured_image']);
+                    $postType = strip_tags($newsItem['post_type']);
+                    $color = strip_tags($newsItem['color']);
+                    $firstName = strip_tags($newsItem['first_name']);
+                    $lastName = strip_tags($newsItem['last_name']);
+                    $profilePicture = strip_tags($newsItem['profile_picture']);
                    
                 echo   '<div class="col-md-6 col-xl-4">                        
-                            <a href="'.$newsItem['slug'].'" class="card card-'.$newsItem['color'].' news-item">                   
-                                <img src="images/'.$newsItem['featured_image'].'" alt="'.trimText($newsItem['title'],40).'">    
-                                <span data-url="#" class="btn btn-flag">'.$newsItem['post_type'].'</span>                            
+                            <a href="'.$slug.'" class="card card-'.$color.' news-item">                   
+                                <img src="images/'.$featuredImage.'" alt="'.trimText($title,40).'">    
+                                <span data-url="#" class="btn btn-flag">'.$postType.'</span>                            
                                 <div class="news-wrap">
-                                    <h4>'.trimText($newsItem['title'],40).'</h4>
-                                    <p>'.trimText($newsItem['content'],100).'</p>
+                                    <h4>'.trimText($title,40).'</h4>
+                                    <p>'.trimText($content,100).'</p>
                                     <span class="btn btn-regular">Read more</span>
                                     <div class="author">
                                         <div class="avatar">
-                                            <img src="images/'.$newsItem['profile_picture'].'" class="img-responsive" alt="'.$newsItem['first_name'].' ">
+                                            <img src="images/'.$profilePicture.'" class="img-responsive" alt="'.$firstName.' ">
                                         </div>
                                         <div class="info">
-                                            <strong>Posted by '.$newsItem['first_name'].' '.$newsItem['last_name'].'</strong><br>
-                                            28th October 2022
+                                            <strong>Posted by '.$firstName.' '.$lastName.'</strong><br>
+                                            '.date('jS F Y', strtotime($publishedOn)).'
                                         </div>
                                     </div>
                                 </div>    
                             </a>
                         </div>';
-    }
-  
-}else{
-    echo 'connection error';
-}
+            }  
+        }
 ?>
