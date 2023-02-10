@@ -1,5 +1,6 @@
 <?php
 $currentPage = "Home";
+include 'includes/session.php';
 include 'includes/header.php';
 ?>
 
