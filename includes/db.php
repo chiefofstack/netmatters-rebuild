@@ -1,4 +1,5 @@
 <?php 
+include 'constants.php';
 
 // The database class, has all the methods for interacting with the database
 
@@ -37,6 +38,34 @@ class databaseObject{
         }
     }
 
+    // save enquiry to table
+    public function saveEnquiry($name, $company, $email, $telephone, $subject, $message, $optIn){
+        try {
+            $query = $this->connection->prepare("INSERT into `enquiries` (`name`, `company`, `email`, `telephone`, `subject`, `message`, `optin` ) VALUES ('$name','$company','$email', '$telephone', '$subject', '$message', '$optIn')");
+            $query->execute();
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+            $this->error =  $e->getMessage(); 
+            return -2; //Error  
+        }
+
+        return 1;
+    }
+
+    // returns an array of enquiries from the database query
+    public function getEnquiries(){
+        try {
+            $query = $this->connection->prepare('SELECT * FROM enquiries ORDER BY id ASC ');
+            $query->execute();
+            $results = $query->fetchAll();
+            return $results;
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+            $this->error =  $e->getMessage(); //Error  
+        }
+    }
 }
+
+$dbConnection = new databaseObject(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
 
 ?>
