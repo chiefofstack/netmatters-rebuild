@@ -75,13 +75,6 @@ include 'includes/header.php';
                             <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=1.7108577489852905%2C52.555138660346024%2C1.714398264884949%2C52.55660144276238&amp;layer=mapnik" ></iframe>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footing">
-                                <h4 class="section-link"><a href="#">View All <i class="fas fa-arrow-right"></i></a></h4>
-                            </div>                        
-                        </div>                    
-                    </div>
                 </div>
             </div>
 
