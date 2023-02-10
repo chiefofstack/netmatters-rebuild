@@ -1,7 +1,7 @@
 <?php
 include 'functions.php';
 
-$dbConnection = new databaseObject("localhost","developer","developer","netmatters");
+
 
         if(isset($dbConnection->error))
         {   
