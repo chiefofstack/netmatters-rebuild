@@ -76,27 +76,154 @@
             }
         }
 
+        & .btn-sm{
+            padding: 12px 30px;
+            font-size: 0.9rem;
+        }
+    }
+}
 
+.contact-info{
+    margin-bottom: 50px;
+    & > p{
+        font-weight:bold;
+        color: #333645;
+    }
 
-        & .phone-number{
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: $design-color;
-            display: block;
-            margin-bottom:15px;
+    & > p > .accordion-trigger{
+        display: flex;
+        align-items: center;
+        color: #333645;
+
+        & > span{
+            margin-right:10px;
 
             &:hover{
-                text-decoration:underline;
+                text-decoration: underline;
             }
-        }
 
-        & .btn-sm{
-            padding: 12px 26px;
-            font-size: 0.8rem;
+            & + span:hover{
+                text-decoration:none;
+            }
         }
     }
 
+    & .accordion-item{        
+        color: #333645;
+        border: none;
+        margin-bottom: 2rem;
+        display:none;
+    }
+}
 
+.contact-form{
+    color: #333645;
+    background-color: #e6e7e9;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom:50px;
+    
+    & .form-group{
+        margin-bottom: 15px;
+    }
+
+    & label, input{
+        width:100%;
+    }
+
+    & label{
+        font-weight:bold;
+        height: 1.8rem;
+        display: inline-block;
+
+        &.required:after{
+            content:"*";
+            color: #ff0000;
+            font-size:1.2rem;
+            font-weight:normal;
+            margin-left:8px;
+        }
+    }
+
+    & .message{
+        width: 100%;
+        height:100px;
+    }
+
+    .form-group:focus{
+        border-color: #5bc0de;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(91 192 222 / 60%);
+    }
+
+    .element2 , .description2{
+        display: table-cell;
+        vertical-align:top;
+    }
+    
+    .description2 a{
+        color:#333645;
+        &:hover{
+            text-decoration:underline;
+        }        
+    }
+    .opt-in2 + label {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border: 3px solid #333645;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-right:20px;
+    }
+    
+    .opt-in2:checked {
+        & + label {
+            background-color: $primary-color;  
+        }  
+        & + label:after {
+            position: relative;
+            top: -5px;
+            left: 4px;
+            content: '\2714';
+            font-size: 1.5rem;
+            color: $white;
+        }
+    }
+    
+    .opt-in2 {
+        display: none;
+    }
+    
+    .description2{
+        font-weight:bold;
+    
+        & label{
+            cursor: pointer;
+        }
+    }
+
+    .btn-regular{
+        font-size: 1.05rem;
+        padding: 10px 18px;
+    }
+
+    .error{
+        border-color: #d64541;
+    }
+}
+
+.body-link{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $design-color;
+    display: block;
+    margin-bottom:15px;
+
+    &:hover{
+        text-decoration:underline;
+        color: $design-color;
+    }
 }
 
 
