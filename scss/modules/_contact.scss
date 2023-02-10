@@ -211,6 +211,16 @@
     .error{
         border-color: #d64541;
     }
+
+    .alert-success{
+        color: #fff;
+        background: #2ecc71;
+    }
+
+    .error-message{
+        color:#d64541;
+        font-size:1rem;
+    }
 }
 
 .body-link{
