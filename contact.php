@@ -32,6 +32,7 @@ include 'includes/header.php';
                                     <a href="cambridge-office" class="btn btn-sm btn-design">View more</a>           
                                 </div>
                             </div>
+                            <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=0.14560103416442874%2C52.23220221632908%2C0.15976309776306155%2C52.23809602426535&amp;layer=mapnik" ></iframe>
                         </div>
                         <div class="col-md-12 col-lg-4">                        
                             <div class="card card-design news-item">
@@ -51,6 +52,7 @@ include 'includes/header.php';
                                     <a href="wymondham-office" class="btn btn-sm btn-design">View more</a>           
                                 </div>
                             </div>
+                            <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=1.134767532348633%2C52.574442809662045%2C1.1392468214035036%2C52.575904948423414&amp;layer=mapnik" ></iframe>
                         </div>
                         <div class="col-md-12 col-lg-4">                        
                             <div class="card card-design news-item">
@@ -70,6 +72,7 @@ include 'includes/header.php';
                                     <a href="yarmouth-office" class="btn btn-sm btn-design">View more</a>           
                                 </div>
                             </div>
+                            <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=1.7108577489852905%2C52.555138660346024%2C1.714398264884949%2C52.55660144276238&amp;layer=mapnik" ></iframe>
                         </div>
                     </div>
                     <div class="row">
