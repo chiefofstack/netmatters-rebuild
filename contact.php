@@ -27,7 +27,7 @@ include 'includes/header.php';
                                     Cowley Road, Milton,<br>
                                     Cambridge,<br>
                                     CB4 0WS</p>
-                                    <a href="tel:01223375772" class="phone-number">01223 37 57 72</a>
+                                    <a href="tel:01223375772" class="body-link">01223 37 57 72</a>
                                     <a href="cambridge-office" class="btn btn-sm btn-design">View more</a>           
                                 </div>
                             </div>
@@ -46,7 +46,7 @@ include 'includes/header.php';
                                     Gateway 11 Business Park,<br>
                                     Wymondham, Norfolk,<br>
                                     NR18 0WZ</p>
-                                    <a href="tel:01603704020" class="phone-number">01603 70 40 20</a>
+                                    <a href="tel:01603704020" class="body-link">01603 70 40 20</a>
                                     <a href="wymondham-office" class="btn btn-sm btn-design">View more</a>           
                                 </div>
                             </div>
@@ -65,7 +65,7 @@ include 'includes/header.php';
                                     Beacon Park, Gorleston,<br>
                                     Great Yarmouth, Norfolk,<br>
                                     NR31 7RA</p>
-                                    <a href="tel:01493603204" class="phone-number">01493 60 32 04</a>
+                                    <a href="tel:01493603204" class="body-link">01493 60 32 04</a>
                                     <a href="yarmouth-office" class="btn btn-sm btn-design">View more</a>           
                                 </div>
                             </div>
@@ -81,176 +81,117 @@ include 'includes/header.php';
                 </div>
             </div>
 
-            <!-- About -->
-            <div class="about">
+            <!-- Contact Section -->
+            <div class="contact-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="inner">
-                                <h2>Welcome to Netmatters</h2>
-                                <p><strong>Netmatters is a leading <a href="#">Bespoke Software</a>, <a href="#">IT Support</a>, and <a href="#">Digital Marketing</a> company based in the East of England with offices in <a href="#">Cambridge</a>, <a href="#">Wymondham</a>, and <a href="#">Great Yarmouth</a>.</strong></p>
-                                <p>We aren't tied into contracts with third-party providers, so you know that our recommendations for your business are based purely with one benefit in mind: to help improve your business with the most appropriate solutions.</p>                        
-                                <p>We pride ourselves on being an ethical business and have a unique business offering and cost model that ensures you get the most from our relationship in an upfront manner.</p>
-                                <a href="#" class="btn btn-welcome">
-                                    Read more<i class="fas fa-arrow-right btn-i-last"></i>
-                                </a>
+                        <div class="col-sm-12 col-xl-4 order-xl-2">
+                            <div class="contact-info">
+                                <p>Email us on:</p>
+                                <p><a href="tel:01223375772" class="body-link">sales@netmatters.com</a></p>
+                                <p>Business hours:</p>
+                                <p>Monday - Friday 07:00 - 18:00</p>
 
-                            </div>                       
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="inner">
-                                <h2>What Our Clients Think</h2>
-                                <p class="five-star">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </p>    
-                                <p class="client-testimonial">Netmatters stood out from the start. Great guys and very easy to work with. Both the build and digital marketing teams are clearly skilled -they know their stuff! They delivered a website to our (high!) expectations and went over and above to ensure we were satisfied clients - and we are!</p>
-                                <p class="client-name">Eleanor Bishop, Head of Marketing - Ashcroft Partnership LLP</p>
+                                <p>
+                                    <a href="#" class="accordion-trigger">
+                                        <span>Out of Hours IT Support</span>
+                                        <span class="fa fa-chevron-down rotate down"></span>
+                                    </a>
+                                </p>
+                                <div class="accordion-item">
+                                    <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                                    
+                                    <p>
+                                        <b>Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00</b></br>
+                                        <b>Sunday 10:00 - 18:00</b>
+                                    </p>
 
-                                <a href="#" class="btn btn-google">
-                                    Google Reviews <i class="fas fa-arrow-right btn-i-last"></i>
-                                </a>
-                                <a href="#" class="btn btn-trust">
-                                    Trustpilot Reviews <i class="fas fa-arrow-right btn-i-last"></i>
-                                </a>
-
+                                    <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours  voicemail. A technician will contact you on the number provided within 45 minutes of your call. 
+                                </div>          
                             </div>
+                        </div>
+                        <div class="col-sm-12 col-xl-8 order-xl-1">
+                            <form action="process.php" method="post">
+                                <div class="contact-form">
+                                    <div class="row">    
+                                        <div class="col-md-12">
+                                            <div class="alert alert-danger" >
+                                                There were errors in the form.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="name" class="required">Your Name</label>
+                                                <input type="text" id="name" name="name" class="input-field">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="company" >Company Name</label>
+                                                <input type="text" id="company" name="company"  class="input-field">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="email" class="required">Your Email</label>
+                                                <input type="text" id="email" name="email" class="input-field">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label for="telephone" class="required">Your Telephone Number</label>
+                                                <input type="text" id="telephone" name="telephone"  class="input-field">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="subject" class="required">Subject</label>
+                                                <input type="text" id="subject" name="subject" class="input-field">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="message" class="required">Message</label>
+                                                <textarea id="message" name="message"  id="message" rows="20" class="input-field message"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="checkbox-field">
+                                                <div class="element2">
+                                                    <input type="checkbox" id="opt-in2" name="opt-in2" class="opt-in2">
+                                                    <label for="opt-in2"></label>
+                                                </div>
+                                                <div class="description2">
+                                                    <label for="opt-in2">Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <a href="#" class="btn btn-design btn-regular">
+                                        Send  Enquiry
+                                    </a>
+                                </div>
+                            </form>                
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Newsletter -->
-            <div class="newsletter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="inner">
-                                <h2>Email Newsletter Sign-Up</h2>
-                                <div class="input-fields">
-                                    <div class="form-group">
-                                        <label for="name" class="required">Your Name</label>
-                                        <input type="text" id="name" name="name" class="input-field">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email" class="required">Your Email</label>
-                                        <input type="email" id="email" name="email"  class="input-field">
-                                    </div>
-                                </div>
-    
-                                <div class="checkbox-field">
-                                    <div class="element">
-                                        <input type="checkbox" id="opt-in" name="opt-in" class="opt-in">
-                                        <label for="opt-in"></label>
-                                    </div>
-                                    <div class="description">
-                                        <label for="opt-in">Please tick this box if you wish to receive marketing information from us. Please see our Privacy Policy for more information on how we keep your data safe.</label>
-                                    </div>
-                                </div>
-
-                                <a href="#" class="btn btn-subscribe btn-regular">
-                                    Subscribe
-                                </a>
-
-                            </div>                       
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <div class="footer">
-                <div class="container">
-                    <div class="footer-menus">
-                        <div class="service-list">
-                            <div class="menu">
-                                <h4>About Netmatters</h4> 
-                                <ul>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Our Careers</a></li>
-                                    <li><a href="#">Our Team</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Cookie Policy</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Environmental Policy</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                </ul>
-                            </div>
-                            <div class="menu">
-                                <h4>Our Services</h4> 
-                                <ul>
-                                    <li><a href="#">Bespoke Software</a></li>
-                                    <li><a href="#">IT Support</a></li>
-                                    <li><a href="#">Digital Marketing</a></li>
-                                    <li><a href="#">Telecoms Services</a></li>
-                                    <li><a href="#">Web Design</a></li>
-                                    <li><a href="#">Cyber Security</a></li>
-                                    <li><a href="#">Developer Training</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="office-list">
-                            <div class="menu">
-                                <h4>Cambridge office</h4> 
-                                <p> 
-                                    Unit 1.31, <br>
-                                    St John's Innovation Centre,<br>
-                                    Cowley Road, Milton,<br>
-                                    Cambridge,<br>
-                                    CB4 0WS
-                                </p>
-                                <p>     
-                                    Tel: <a href="tel:01223375772">01223 37 57 72</a>
-                                </p>
-                            </div>
-                            <div class="menu">
-                                <h4>Wymondham Office</h4> 
-                                <p> 
-                                    Unit 15,<br>
-                                    Penfold Drive,<br>
-                                    Gateway 11 Business Park,<br>
-                                    Wymondham, Norfolk,<br>
-                                    NR18 0WZ
-                                </p>
-                                <p>     
-                                    Tel: <a href="tel:01603704020">01603 70 40 20</a>
-                                </p>
-                            </div>
-                            <div class="menu">
-                                <h4>Great Yarmouth Office</h4> 
-                                <p> 
-                                    Suite F23,<br>
-                                    Beacon Innovation Centre,<br>
-                                    Beacon Park, Gorleston,<br>
-                                    Great Yarmouth, Norfolk,<br>
-                                    NR31 7RA
-                                </p>
-                                <p>     
-                                    Tel: <a href="tel:01493603204">01493 60 32 04</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>  
-                    <div class="bottom-bar">
-                        <div class="copyright">
-                            <p>
-                                &copy; Copyright Netmatters 2023. <br> All rights reserved.                             
-                            </p>
-                            <span> - </span>
-                            <a href="#">Sitemap</a>
-                        </div>
-                        <div class="social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>             
-                </div>
-            </div>
+            <?php
+                require 'includes/newsletter.php';
+            ?>
 
 <?php
 @include 'includes/footer.php';
