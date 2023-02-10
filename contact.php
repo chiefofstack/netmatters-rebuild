@@ -116,6 +116,7 @@ include 'includes/header.php';
                                 <input type="hidden" name="enquire" value="1">
                                 <div class="contact-form">
                                     <a id="contact-form"></a>
+                                    <?php if(isset($_SESSION['success'])) { ?>
                                     <div class="row">    
                                         <div class="col-md-12">
                                             <?php if($_SESSION['success'] == 0){ ?>
@@ -137,6 +138,7 @@ include 'includes/header.php';
                                             <?php } ?>
                                         </div>
                                     </div>
+                                    <?php } ?>
                                     <div class="row">
                                         <div class="col-md-12 col-lg-6">
                                             <div class="form-group">
