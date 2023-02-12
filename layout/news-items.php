@@ -1,7 +1,4 @@
 <?php
-include 'functions.php';
-
-
 
         if(isset($dbConnection->error))
         {   
