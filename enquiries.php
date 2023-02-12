@@ -1,7 +1,7 @@
 <?php
 $currentPage = "Enquiries";
 include 'includes/session.php';
-include 'includes/header.php';
+include 'layout/header.php';
 ?>
 
  
@@ -31,7 +31,7 @@ include 'includes/header.php';
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php include 'includes/enquiry-items.php'?>
+                                        <?php include 'layout/enquiry-items.php'?>
 
                                     </tbody>
                                 </table>
@@ -42,5 +42,5 @@ include 'includes/header.php';
 
 
 <?php
-@include 'includes/footer.php';
+@include 'layout/footer.php';
 ?>

@@ -1,7 +1,7 @@
 <?php
 $currentPage = "Home";
 include 'includes/session.php';
-include 'includes/header.php';
+include 'layout/header.php';
 ?>
 
             <!-- Slideshow -->
@@ -321,7 +321,7 @@ include 'includes/header.php';
                     </div>
                     <div class="row news-items">
                         <?php 
-                            include 'includes/news-items.php';
+                            include 'layout/news-items.php';
                         ?>
                     </div>
                     <div class="row">
@@ -379,9 +379,9 @@ include 'includes/header.php';
             </div>
 
             <?php
-                require 'includes/newsletter.php';
+                require 'layout/newsletter.php';
             ?>
 
 <?php
-@include 'includes/footer.php';
+@include 'layout/footer.php';
 ?>

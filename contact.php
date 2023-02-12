@@ -1,7 +1,7 @@
 <?php
 $currentPage = "Contact";
 include 'includes/session.php';
-include 'includes/header.php';
+include 'layout/header.php';
 ?>
             <!-- Offices -->
             <div class="offices">
@@ -211,9 +211,9 @@ include 'includes/header.php';
             </div>
 
             <?php
-                require 'includes/newsletter.php';
+                require 'layout/newsletter.php';
             ?>
 
 <?php
-@include 'includes/footer.php';
+@include 'layout/footer.php';
 ?>
