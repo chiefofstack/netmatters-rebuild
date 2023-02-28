@@ -190,12 +190,14 @@ include 'layout/header.php';
                                         <div class="col-12">
                                             <div class="checkbox-field">
                                                 <div class="element2">
-                                                    <input type="checkbox" id="opt-in2" name="opt-in2" class="opt-in2">
+                                                    <input type="checkbox" id="opt-in2" name="opt-in2" class="opt-in2" <?php  if(strcmp($form->getValue('opt-in2'),"on") == 0) echo "checked";  ?>>
                                                     <label for="opt-in2"></label>
                                                 </div>
                                                 <div class="description2">
                                                     <label for="opt-in2">Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a> for more information on how we keep your data safe.</label>
+                                                    
                                                 </div>
+                                                <span class="error-message"><?php echo $form->getError('opt-in2'); ?></span>
                                             </div>
                                         </div>
                                     </div>

@@ -28,7 +28,7 @@ class sessionObject{
         return $post;
     }
 
-    public function enquire($name,$company,$email,$telephone,$subject,$message,$optIn){
+    public function enquire($name,$company,$email,$telephone,$subject,$message,$optIn2){
         global $form, $dbConnection;
 
         /* Validate inputs */
@@ -142,6 +142,14 @@ class sessionObject{
             }            
         }
 
+        // Message error checking
+        $field = "opt-in2";  
+
+            $optIn2 = stripslashes($optIn2);
+            if((strcmp($optIn2,"on") != 0) && (strcmp($optIn2,"off") != 0)){
+                $form->setError($field, "* Opt in value is not valid");
+            }
+
 
         // If errors found show form again with error messages, else save to database
         if($form->errorCount > 0 ){
@@ -153,7 +161,7 @@ class sessionObject{
                 return -1; // -1 = connection error
                 
             }else{
-                $result = $dbConnection->saveEnquiry($name, $company, $email, $telephone, $subject, $message, $optIn);
+                $result = $dbConnection->saveEnquiry($name, $company, $email, $telephone, $subject, $message, $optIn2);
                 if(!$result){
                     return -2; // -2 = error while saving
                 }
